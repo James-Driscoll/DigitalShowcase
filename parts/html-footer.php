@@ -1,17 +1,32 @@
 
 
         <!-- Footer begins here -->
-        <div class="footer">
-            <ul>
-                <!--<li class="email text-left"><a href="mailto:info@thomasline.uk" target="_blank">info@thomasline.uk</a></li>-->
-                <li class="developer text-center"><a href="http://jamesdriscoll.london" target="_blank">Developed by James Driscoll</a></li>
-                <li class="text-center"><a href="http://mattlee.graphics/" target="_blank">Logo design by Matt Lee</a></li>
-                <li class="copy text-right"><span>copyright &copy; Thomas Line 2016</span></li>
+        <footer class="col-md-12">
+            <ul class="social text-center">
+                <li class="email">
+                    <a href="mailto:getintocuh@marketing.teradata.com">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="instagram">
+                    <a href="https://www.instagram.com/teradata.marketing.apps/" target="_blank">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="facebook">
+                    <a href="https://www.facebook.com/TeradataAppsUKI" target="_blank">
+                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="twitter">
+                    <a href="https://twitter.com/teradataappsuki" target="_blank">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                </li>
             </ul>
-        </div>
+        </footer>
         <!-- Footer ends here -->
-    </div> <!-- Close .contentWrapper -->
-        </div> <!-- Close .pageWrapper -->
+
         <!-- BxSlider -->
         <script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.bxSlider.min.js"></script>
 
@@ -20,7 +35,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 
         <!-- Bootstrap JS -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
         <!-- Custom JS -->
         <script src="<?php echo get_stylesheet_directory_uri();?>/js/site.js"></script>

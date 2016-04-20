@@ -79,7 +79,7 @@ if (class_exists('MultiPostThumbnails')) {
 }
 
 /* --------------------------------------------------
- * Register Custom Menu
+ * Register Custom Menus
   -------------------------------------------------- */
 register_nav_menus(
   array(
@@ -90,24 +90,24 @@ register_nav_menus(
 /* -------------------------------------------------------
     Custom Post Types
 ------------------------------------------------------- */
-add_action('init', 'register_jdtl_narrative');
-function register_jdtl_narrative() {
-  register_post_type( 'jdtl_narrative',
+add_action('init', 'register_jd_casestudies');
+function register_jd_casestudies() {
+  register_post_type( 'jd_casestudies',
     array('labels' => array(
-      'name' => __('Narrative Video', 'post type general name'), /* The Title of the Group */
-      'singular_name' => __('Custom Post', 'post type singular name'), /* The individual type */
-      'add_new' => __('Add New', 'custom post type item'), /* The add new menu item */
-      'add_new_item' => __('Add New Video'), /* Add New Display Title */
+      'name' => __('Case Studies', 'post type general name'), /* The Title of the Group */
+      'singular_name' => __('Case Study', 'post type singular name'), /* The individual type */
+      'add_new' => __('Add New Case Study', 'custom post type item'), /* The add new menu item */
+      'add_new_item' => __('Add New Case Study'), /* Add New Display Title */
       'edit' => __( 'Edit' ), /* Edit Dialog */
-      'edit_item' => __('Edit Video'), /* Edit Display Title */
-      'new_item' => __('New Narrative Video'), /* New Display Title */
-      'view_item' => __('View Narrative Videos'), /* View Display Title */
-      'search_items' => __('Search Narrative Videos'), /* Search Custom Type Title */
+      'edit_item' => __('Edit Case Study'), /* Edit Display Title */
+      'new_item' => __('New Case Study'), /* New Display Title */
+      'view_item' => __('View Case Studies'), /* View Display Title */
+      'search_items' => __('Search Case Studies'), /* Search Custom Type Title */
       'not_found' =>  __('Nothing found in the Database.'), /* This displays if there are no entries yet */
       'not_found_in_trash' => __('Nothing found in Trash'), /* This displays if there is nothing in the trash */
       'parent_item_colon' => ''
       ), /* end of arrays */
-      'description' => __( 'This is the Video custom post type.' ), /* Custom Type Description */
+      'description' => __( 'This is the Case Study custom post type.' ), /* Custom Type Description */
       'public' => true,
       'publicly_queryable' => true,
       'exclude_from_search' => false,
@@ -122,73 +122,6 @@ function register_jdtl_narrative() {
     ) /* end of options */
   ); /* end of register post type */
 }
-
-add_action('init', 'register_jdtl_commercial');
-function register_jdtl_commercial() {
-  register_post_type( 'jdtl_commercial',
-    array('labels' => array(
-      'name' => __('Commercial Video', 'post type general name'), /* The Title of the Group */
-      'singular_name' => __('Custom Post', 'post type singular name'), /* The individual type */
-      'add_new' => __('Add New', 'custom post type item'), /* The add new menu item */
-      'add_new_item' => __('Add New Video'), /* Add New Display Title */
-      'edit' => __( 'Edit' ), /* Edit Dialog */
-      'edit_item' => __('Edit Video'), /* Edit Display Title */
-      'new_item' => __('New Commercial Video'), /* New Display Title */
-      'view_item' => __('View Commercial Videos'), /* View Display Title */
-      'search_items' => __('Search Commercial Videos'), /* Search Custom Type Title */
-      'not_found' =>  __('Nothing found in the Database.'), /* This displays if there are no entries yet */
-      'not_found_in_trash' => __('Nothing found in Trash'), /* This displays if there is nothing in the trash */
-      'parent_item_colon' => ''
-      ), /* end of arrays */
-      'description' => __( 'This is the Video custom post type.' ), /* Custom Type Description */
-      'public' => true,
-      'publicly_queryable' => true,
-      'exclude_from_search' => false,
-      'show_ui' => true,
-      'query_var' => true,
-      'menu_position' => 5, /* this is what order you want it to appear in on the left hand side menu */
-      'rewrite' => true,
-      'capability_type' => 'post',
-      'hierarchical' => false,
-      /* the next one is important, it tells what's enabled in the post editor */
-      'supports' => array( 'title', 'editor', 'thumbnail')
-    ) /* end of options */
-  ); /* end of register post type */
-}
-
-add_action('init', 'register_jdtl_videoart');
-function register_jdtl_videoart() {
-  register_post_type( 'jdtl_videoart',
-    array('labels' => array(
-      'name' => __('Video Art', 'post type general name'), /* The Title of the Group */
-      'singular_name' => __('Custom Post', 'post type singular name'), /* The individual type */
-      'add_new' => __('Add New', 'custom post type item'), /* The add new menu item */
-      'add_new_item' => __('Add New Video Art'), /* Add New Display Title */
-      'edit' => __( 'Edit' ), /* Edit Dialog */
-      'edit_item' => __('Edit Video Art'), /* Edit Display Title */
-      'new_item' => __('New Video Art'), /* New Display Title */
-      'view_item' => __('View Video Art'), /* View Display Title */
-      'search_items' => __('Search Video Art'), /* Search Custom Type Title */
-      'not_found' =>  __('Nothing found in the Database.'), /* This displays if there are no entries yet */
-      'not_found_in_trash' => __('Nothing found in Trash'), /* This displays if there is nothing in the trash */
-      'parent_item_colon' => ''
-      ), /* end of arrays */
-      'description' => __( 'This is the Video custom post type.' ), /* Custom Type Description */
-      'public' => true,
-      'publicly_queryable' => true,
-      'exclude_from_search' => false,
-      'show_ui' => true,
-      'query_var' => true,
-      'menu_position' => 7, /* this is what order you want it to appear in on the left hand side menu */
-      'rewrite' => true,
-      'capability_type' => 'post',
-      'hierarchical' => false,
-      /* the next one is important, it tells what's enabled in the post editor */
-      'supports' => array( 'title', 'editor', 'thumbnail')
-    ) /* end of options */
-  ); /* end of register post type */
-}
-
 
 /* -------------------------------------------------------
     Make the site private

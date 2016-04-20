@@ -1,21 +1,20 @@
 /*
-Theme Name: 	Thomas Line Art
-Theme URI: 		http://www.art.thomasline.uk
-Description: 	Thomas Line Art
+Theme Name: 	Digital Showcase
+Theme URI: 		TBC
+Description: 	DigitalShowcase
 Version: 		1.0
 Author: 		James Driscoll
-Author URI: 	http://www.jamesdriscoll.london
+Author URI: 	TBC
 Tags:
 */
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/
 
    --Colours--
    ==============================================
-*  Black: #000;
-*  White: #FFF;
-*  Grey:  #C7C3C3;
+
    ==============================================
 
+*/
 html,
 button,
 input,
@@ -104,262 +103,177 @@ textarea {
    ========================================================================== */
 
 
-/* ==========================================================================
-   $ Site Items
-   ========================================================================== */
+/* -- Site Items ------------------------------------------------------------ */
 html {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 body {
-    background: #FFF;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-.pageWrapper {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
-/* -- Container Items-------------------------------------------------------- */
-.container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+/* -- Header Items ---------------------------------------------------------- */
+/* -- General -----------------------*/
+header {
+    height: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
 }
-.menuWrapper {
-    float: left;
-    position: fixed;
-    width: 20%;
-    padding-left: 4%;
+.title {
+    color: #FFF;
     margin-top: 100px;
+    font-family: 'Titillium Web', sans-serif;
 }
-.contentWrapper {
-    float: right;
-    width: 80%;
-    padding-right: 15%;
-    margin-top: 100px;
-    min-height: 600px;
+.title h1 {
+    font-size: 70px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-family: 'Titillium Web', sans-serif;
 }
-@media screen and (max-width: 1200px) {
-    #vim_vid {
-        height: 480px;
-    }
+.title h2 {
+    font-size: 18px;
+    font-weight: lighter;
+    font-family: 'Titillium Web', sans-serif;
 }
-@media screen and (max-width: 1000px) {
-    #vim_vid {
-        height: 360px;
-    }
-}
-@media screen and (max-width: 900px) {
-    .contentWrapper {
-        padding-right: 4%;
-        width: 75%;
-    }
-}
-@media screen and (max-width: 800px) {
-    .contentWrapper {
-        padding: 0;
-        width: 100%;
-        float: left;
-        clear: both;
-        margin: 0;
-        margin-bottom: 30px;
-    }
-    .menuWrapper {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        float: left;
-        position: relative;
-    }
-    .nav {
-        text-align: center;
-    }
-    .logo {
-        text-align: center;
-        margin-top: 100px;
-    }
-    .social {
-        text-align: center;
-    }
-    div.footer {
-        margin-top: 50px;
-    }
-    div.footer ul li {
-        display: block;
-        text-align: center;
-        line-height: normal;
-        padding: 10px 0px 10px 0px;
-        width: 100%;
-    }
-    #vim_vid {
-        height: 420px;
-        width: 100%;
-    }
-}
-@media screen and (max-width: 400px) {
-    #vim_vid {
-        height: 320px;
-    }
-}
-
-/* -- menu Items ------------------------------------------------------- */
-/* -- Logo --------------------------*/
-.logo img {
-    -moz-transition: all.3s;
-    -o-transition: all.3s;
-    -ms-transition: all.3s;
-    -webkit-transition: all.3s;
-    transition: all.3s;
-}
-.logo img:hover {
-    opacity: 0.7;
-    -moz-transition: all.3s;
-    -o-transition: all.3s;
-    -ms-transition: all.3s;
-    -webkit-transition: all.3s;
-    transition: all.3s;
+header .btn {
+    color: #FFF;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 /* -- Navigation --------------------*/
  .navWrapper {
-    clear: both;
-    margin-top: 30px;
-    margin-left: 0;
-}
- .navWrapper ul {
+     margin-top: 30px;
+ }
+ .navWrapper .nav ul {
     padding-left: 0px;
+    float: right;
 }
- .navWrapper ul li {
-    display: block;
+ .navWrapper .nav ul li {
+     display: inline;
+     padding: 10px;
 }
- .navWrapper a {
+ .navWrapper .nav a {
     text-decoration: none;
-    font-family: 'Lato', 'Helvetica', 'Arial';
+    font-family: 'Titillium Web', sans-serif;
     font-weight: 300;
-    font-size: 20px;
-    line-height: 35px;
+    font-size: 16px;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
+    color: #FFF;
 }
- .navWrapper a:hover {
+ .navWrapper .nav a:hover {
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
+    color: #fedf44;
 }
- .navWrapper ul .current-page-ancestor:hover a,
- .navWrapper ul .current-page-ancestor a,
- .navWrapper ul .current-page-item:hover a,
- .navWrapper ul .current-menu-item:hover a,
- .navWrapper ul .current-page-item a,
- .navWrapper ul .current-menu-item a, {
+ .navWrapper .nav ul .current-page-ancestor:hover a,
+ .navWrapper .nav ul .current-page-ancestor a,
+ .navWrapper .nav ul .current-page-item:hover a,
+ .navWrapper .nav ul .current-menu-item:hover a,
+ .navWrapper .nav ul .current-page-item a,
+ .navWrapper .nav ul .current-menu-item a, {
     color: #000;
 }
- .navWrapper ul .current-menu-item a {
+ .navWrapper .nav ul .current-menu-item a {
     font-weight: normal;
 }
- .navWrapper .break {
-    margin-top: 30px;
-}
- .navWrapper .shade-1 a {
-    color: #000;
-}
- .navWrapper .shade-1 a:hover {
-    color: #C7C3C3;
-}
- .navWrapper .shade-2 a {
-    color: #C7C3C3;
-}
- .navWrapper .shade-2 a:hover {
-    color: #000;
-}
-
-/* -- Social ------------------------*/
-.menuWrapper .social {
-    padding: 0;
-    list-style: none;
-    height: 200px;
-    line-height: 200px;
-}
-.menuWrapper .social ul {
-    padding: 0;
-    margin: 0;
-}
-.menuWrapper .social li {
-    display: block;
-    margin: 0px 0px 0px 5px;
-    display:inline-block;
-}
-.menuWrapper .social li a i {
-    font-size: 26px;
-    color: #000;
-    -moz-transition: all.3s;
-    -o-transition: all.3s;
-    -ms-transition: all.3s;
-    -webkit-transition: all.3s;
-    transition: all.3s;
-}
-.menuWrapper .social li a i:hover {
-    color: #C7C3C3;
-    -moz-transition: all.3s;
-    -o-transition: all.3s;
-    -ms-transition: all.3s;
-    -webkit-transition: all.3s;
-    transition: all.3s;
-}
-.menuWrapper .social li a .fa-facebook {
-    font-size: 24px;
-}
-
 
 /* -- Page Items ------------------------------------------------------------ */
-.content .description {
-    font-size: 14px;
-    color: #000;
-    font-weight: normal;
-    font-family: 'Lato', 'Helvetica', 'Arial';
-}
-.wpcf7 .btn-primary {
-    background-color: #000;
-    border-color: #000;
-}
-.wpcf7 .btn-primary:hover {
-    opacity: 0.7;
+.content {
+    margin-top: 200px;
+    margin-bottom: 200px;
 }
 
-/* -- Video Page Items ------------------------------------------------------ */
-.video-page {
-    font-size: 16px;
-    font-family: 'Lato', 'Helvetica', 'Arial';
-}
-.video {
+/* -- Home Page Items ------------------------------------------------------- */
+.page-home .item-top {
     margin-bottom: 100px;
 }
-.video .video_camera {
-    font-style: italic;
-    font-size: 14px;
+.page-home .item  span,
+.page-home .item  i {
+    font-size: 70px;
+    display:block;
 }
-.video .video_synopsis-title {
-    font-size: 16px;
-    font-weight: bold;
+
+/* --Footer Items------------------------------------------------------------ */
+footer {
+    background: #000;
 }
-.video .video_tags {
-    color: #C7C3C3;
-    display: block;
+footer .social {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
-.video .video_details {
-    padding: 10px;
+footer .social li {
+    display: inline-block;
+    text-align: center;
 }
+footer .social li a {
+    margin: 30px;
+}
+footer .social li a:hover i {
+    color: #fedf44;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -ms-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+}
+footer .social li a i {
+    color: #FFF;
+    font-size: 30px;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -ms-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* --Custom Post Items------------------------------------------------------- */
 /* --Page Items-------------------------------*/
@@ -429,45 +343,7 @@ a.item:hover {
     font-weight: normal;
 }
 
-/* --Footer Items------------------------------------------------------------ */
-.footer {
-    /*clear: both;
-    position: relative;
-    z-index: 10;
-    background: #000;
-    height: 100px;*/
-    margin-top: 100px;
-    margin-bottom: 30px;
-    font-family: 'Lato', 'Helvetica', 'Arial';
-    color: #000;
-    font-size: 15px;
-    font-weight: normal;
-}
-.footer .container-full {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 100%;
-}
-.footer a {
-    text-decoration: none;
-    color: #000;
-    padding: 0;
-}
-.footer a:hover {
-    text-decoration: underline;
-    opacity: 0.7;
-}
-.footer ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-.footer ul li {
-    display: inline-block;
-    width: 33%;
-    text-align: center;
-}
+
 
 /* ==========================================================================
    Helper classes
