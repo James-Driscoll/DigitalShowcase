@@ -10,8 +10,6 @@
    */
 ?>
 
-<body <?php body_class(); ?> id="body-background">
-
 <?php get_template_parts( array( 'parts/html-header') ); ?>
 
 <div class="col-md-10 col-md-offset-1 content page-home container">
