@@ -13,6 +13,11 @@
 <?php get_template_parts( array( 'parts/html-header') ); ?>
 
 <div class="col-md-10 col-md-offset-1 content page-home container">
+
+    <div class="row strap-line">
+        <h2 class="text-center">This is Aimee's Heading</h2>
+        <p class="text-center">Thiss is Aimee's Description. Thiss is Aimee's Description. Thiss is Aimee's Description. Thiss is Aimee's Description. Thiss is Aimee's Description. </p>
+    </div>
     <div class="col-md-4 item item-top">
         <i class="fa <?php the_field('item_1_icon'); ?> text-center" aria-hidden="true"></i>
         <h3 class="text-center"><?php the_field('item_1_heading'); ?></h3>
