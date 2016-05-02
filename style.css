@@ -113,20 +113,20 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: #EDEDED;
+    background: #F2F0DF;
 }
 
 /* -- Header Items ---------------------------------------------------------- */
 /* -- General -----------------------*/
 header {
-    height: 600px;
+    height: 100%;
     width: 100%;
     background-repeat: no-repeat;
     background-position: left top;
 }
 .title {
-    color: #FFF;
-    margin-top: 100px;
+    color: #607890;
+    margin-top: 32px;
     font-family: 'Titillium Web', sans-serif;
 }
 .title h1 {
@@ -137,11 +137,11 @@ header {
 }
 .title h2 {
     font-size: 18px;
-    font-weight: lighter;
+    font-weight: normal;
     font-family: 'Titillium Web', sans-serif;
 }
 header .btn {
-    color: #FFF;
+    color: #607890;
     font-family: 'Titillium Web', sans-serif;
 }
 
@@ -160,14 +160,14 @@ header .btn {
  .navWrapper .nav a {
     text-decoration: none;
     font-family: 'Titillium Web', sans-serif;
-    font-weight: 300;
+    font-weight: normal;
     font-size: 16px;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
-    color: #FFF;
+    color: #607890;
 }
  .navWrapper .nav a:hover {
     -moz-transition: all .1s ease-in;
@@ -175,7 +175,7 @@ header .btn {
     -ms-transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
-    color: #fedf44;
+    color: #CACCB6;
 }
  .navWrapper .nav ul .current-page-ancestor:hover a,
  .navWrapper .nav ul .current-page-ancestor a,
@@ -186,7 +186,7 @@ header .btn {
     color: #000;
 }
  .navWrapper .nav ul .current-menu-item a {
-    font-weight: normal;
+    font-weight: bold;
 }
 
 /* -- Page Items ------------------------------------------------------------ */
@@ -204,7 +204,7 @@ header .btn {
 .page-home .item  i {
     font-size: 70px;
     display:block;
-    color: red;
+    color: #A9C1D9;
 }
 .content .strap-line {
     margin-bottom: 100px;
@@ -216,7 +216,7 @@ header .btn {
 
 /* --Footer Items------------------------------------------------------------ */
 footer {
-    background: #000;
+    background: #607890;
 }
 footer .social {
     margin: 0;
@@ -233,7 +233,7 @@ footer .social li a {
     margin: 30px;
 }
 footer .social li a:hover i {
-    color: #fedf44;
+    color: #CACCB6;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
@@ -241,7 +241,7 @@ footer .social li a:hover i {
     transition: all .1s ease-in;
 }
 footer .social li a i {
-    color: #FFF;
+    color: #F2F0DF;
     font-size: 30px;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
