@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html class="no-js" lang="en"><!--<![endif]-->
-	<head>
+<head>
 
 		<title><?php wp_title( 'DigitalShowcase |' ); ?></title>
 
@@ -16,7 +16,8 @@
         <!-- Google Font -->
         <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200' rel='stylesheet' type='text/css'>
-
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+        
         <!-- Icon  -->
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico"/>
 
@@ -42,35 +43,3 @@
     	<script>site = {ss: "<?php echo get_stylesheet_directory_uri(); ?>"};</script>
 
     </head>
-
-	<body <?php body_class(); ?>>
-
-        <!--[if lt IE 7]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-		<?php global $post; ?>
-		<?php
-		$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
-		?>
-
-		<header class="col-md-12" style="background: url(<?php echo $src[0]; ?> ) !important;">
-
-			<div class="container">
-
-				<div class="navWrapper">
-				  <?php wp_nav_menu (array('theme_location' => 'page_navigation','container_class' => 'nav')); ?>
-				</div>
-
-				<div class="title">
-					<h1 class="text-right"><?php the_field('heading'); ?></h1>
-					<h2 class="text-right"><?php the_field('sub_heading'); ?></h2>
-				</div>
-
-				<!--<div class="row"
-					<button type="button" class="btn btn-default pull-right text-right">Learn More</button>
-				</div>-->
-
-			</div>
-
-		</header>

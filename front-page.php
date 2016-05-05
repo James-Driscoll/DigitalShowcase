@@ -10,11 +10,30 @@
    */
 ?>
 
-<?php get_template_parts( array( 'parts/html-header') ); ?>
+<?php get_template_parts( array( 'head') ); ?>
 
-<div class="col-md-10 col-md-offset-1 content page-home container">
+<?php global $post; ?>
+<?php
+$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
+?>
 
-    <div class="row strap-line">
+<div class="intro" style="background: url(<?php echo $src[0]; ?> ) !important;">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="container">
+    		<div class="navWrapper">
+    		  <?php wp_nav_menu (array('theme_location' => 'page_navigation','container_class' => 'nav')); ?>
+    		</div>
+
+            <div class="title">
+                <h1 class="text-right"><?php the_field('heading'); ?></h1>
+                <h2 class="text-right"><?php the_field('sub_heading'); ?></h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12 page-home">
+    <div class="col-md-12 strap-line">
         <h2 class="text-center"><?php the_field('home_strapline_heading'); ?></h2>
         <p class="text-center"><?php the_field('home_strapline_sub_heading'); ?></p>
     </div>
@@ -50,4 +69,4 @@
     </div>
 </div>
 
-<?php get_template_parts( array( 'parts/html-footer') ); ?>
+<?php get_template_parts( array( 'footer') ); ?>

@@ -113,36 +113,15 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: #F2F0DF;
+    background: #f7f7f7;
 }
 
-/* -- Header Items ---------------------------------------------------------- */
-/* -- General -----------------------*/
+/* -- Nav Items ------------------------------------------------------------- */
 header {
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: left top;
-}
-.title {
-    color: #607890;
-    margin-top: 32px;
-    font-family: 'Titillium Web', sans-serif;
-}
-.title h1 {
-    font-size: 70px;
-    font-weight: lighter;
-    text-transform: uppercase;
-    font-family: 'Titillium Web', sans-serif;
-}
-.title h2 {
-    font-size: 18px;
-    font-weight: normal;
-    font-family: 'Titillium Web', sans-serif;
-}
-header .btn {
-    color: #607890;
-    font-family: 'Titillium Web', sans-serif;
+    background: #000;
+    height: 80px;
+    position: fixed;
+    opacity: 1;
 }
 
 /* -- Navigation --------------------*/
@@ -167,7 +146,7 @@ header .btn {
     -ms-transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
-    color: #607890;
+    color: #fed136;
 }
  .navWrapper .nav a:hover {
     -moz-transition: all .1s ease-in;
@@ -175,7 +154,7 @@ header .btn {
     -ms-transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
-    color: #CACCB6;
+    color: #fec503;
 }
  .navWrapper .nav ul .current-page-ancestor:hover a,
  .navWrapper .nav ul .current-page-ancestor a,
@@ -189,14 +168,35 @@ header .btn {
     font-weight: bold;
 }
 
-/* -- Page Items ------------------------------------------------------------ */
-.content {
+/* -- Front-Page Items ------------------------------------------------------ */
+/* -- Intro Items ----------------------- */
+.intro {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.title {
+    color: #FFF;
+    margin-top: 32px;
+    font-family: 'Titillium Web', sans-serif;
+}
+.title h1 {
+    font-size: 70px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: 'Titillium Web', sans-serif;
+}
+.title h2 {
+    font-size: 18px;
+    font-weight: normal;
+    font-family: 'Titillium Web', sans-serif;
+}
+/* -- Facets Items ----------------------- */
+.page-home {
     margin-top: 100px;
     margin-bottom: 100px;
     font-family: 'Titillium Web', sans-serif;
 }
-
-/* -- Home Page Items ------------------------------------------------------- */
 .page-home .item-top {
     margin-bottom: 100px;
 }
@@ -204,19 +204,26 @@ header .btn {
 .page-home .item  i {
     font-size: 70px;
     display:block;
-    color: #A9C1D9;
+    color: #fed136;
 }
-.content .strap-line {
+.page-home .strap-line {
     margin-bottom: 100px;
     font-family: 'Titillium Web', sans-serif;
 }
-.content .strap-line h2 {
+.page-home .strap-line h2 {
     font-size: 40px;
+    font-family: 'Droid Serif', serif;
+}
+
+.content {
+    min-height: 600px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 /* --Footer Items------------------------------------------------------------ */
 footer {
-    background: #607890;
+    background: #000;
 }
 footer .social {
     margin: 0;
@@ -233,7 +240,7 @@ footer .social li a {
     margin: 30px;
 }
 footer .social li a:hover i {
-    color: #CACCB6;
+    color: #f7f7f7;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
@@ -241,7 +248,7 @@ footer .social li a:hover i {
     transition: all .1s ease-in;
 }
 footer .social li a i {
-    color: #F2F0DF;
+    color: #fed136;
     font-size: 30px;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;

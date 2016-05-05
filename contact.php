@@ -9,7 +9,8 @@
  * Please see /external/starkers-utilities.php for info on get_template_parts()
  */
 
-get_template_parts( array( 'parts/html-header') );
+get_template_parts( array( 'head') );
+get_template_parts( array( 'nav') );
 
 if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
@@ -21,7 +22,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 <?php endwhile;
 
-get_template_parts( array( 'parts/footer','parts/html-footer' ) ); ?>
+get_template_parts( array( 'footer') ); ?>
 
 <script type="text/javascript" src="form-scripts.js"></script>
 <script type="text/javascript" src="validator.min.js"></script>
