@@ -221,6 +221,33 @@ header {
     margin-bottom: 100px;
 }
 
+/* --Case Study Page Items--------------------------------------------------- */
+.case-study {
+    display: block;
+    padding: 20px;
+    margin: 20px;
+    color: #000;
+    font-family: 'Titillium Web', sans-serif;
+    border: 1px solid #f7f7f7;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -ms-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+}
+a.case-study:hover {
+    border: 1px solid #fed136;
+    text-decoration: none;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -ms-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+
 /* --Footer Items------------------------------------------------------------ */
 footer {
     background: #000;
