@@ -146,7 +146,8 @@ header {
     -ms-transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
-    color: #fed136;
+    color: #66CCFF;
+    padding: 10px;
 }
  .navWrapper .nav a:hover {
     -moz-transition: all .1s ease-in;
@@ -154,7 +155,8 @@ header {
     -ms-transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
-    color: #fec503;
+    color: #0099CC;
+    border-bottom: 2px solid #0099CC;
 }
  .navWrapper .nav ul .current-page-ancestor:hover a,
  .navWrapper .nav ul .current-page-ancestor a,
@@ -204,7 +206,7 @@ header {
 .page-home .item  i {
     font-size: 70px;
     display:block;
-    color: #fed136;
+    color: #66CCFF;
 }
 .page-home .strap-line {
     margin-bottom: 100px;
@@ -216,13 +218,13 @@ header {
 }
 
 .content {
-    min-height: 600px;
+    min-height: 700px;
     margin-top: 100px;
     margin-bottom: 100px;
 }
 
 /* --Case Study Page Items--------------------------------------------------- */
-.case-study {
+.case-study-page {
     display: block;
     padding: 20px;
     margin: 20px;
@@ -235,8 +237,8 @@ header {
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
 }
-a.case-study:hover {
-    border: 1px solid #fed136;
+a.case-study-page:hover {
+    border: 1px solid #66CCFF;
     text-decoration: none;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
@@ -247,6 +249,30 @@ a.case-study:hover {
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
+/* --Case Study Single Items------------------------------------------------- */
+.case-study-single {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 7px;
+}
+.case-study-single h1 {
+    color: #66CCFF;
+    font-family: 'Titillium Web', sans-serif;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.case-study-single h3 {
+    margin-top: 40px;
+    color: #66CCFF;
+    font-family: 'Titillium Web', sans-serif;
+}
+.case-study-single .bullet_points {
+    background-color: #66CCFF;
+    padding: 10px;
+}
+.case-study-single .bullet_points ul {
+    padding-left: 30px;
+}
 
 /* --Footer Items------------------------------------------------------------ */
 footer {
@@ -267,7 +293,7 @@ footer .social li a {
     margin: 30px;
 }
 footer .social li a:hover i {
-    color: #f7f7f7;
+    color: #0099CC;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
@@ -275,7 +301,7 @@ footer .social li a:hover i {
     transition: all .1s ease-in;
 }
 footer .social li a i {
-    color: #fed136;
+    color: #66CCFF;
     font-size: 30px;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;

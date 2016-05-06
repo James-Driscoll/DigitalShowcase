@@ -1,7 +1,7 @@
 
 
         <!-- Footer begins here -->
-        <footer class="col-md-12">
+        <footer class="col-xs-12">
             <ul class="social text-center">
                 <li class="email">
                     <a href="mailto:getintocuh@marketing.teradata.com">

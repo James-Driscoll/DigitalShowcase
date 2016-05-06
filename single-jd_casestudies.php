@@ -20,20 +20,42 @@ get_template_parts( array( 'head') );
 get_template_parts( array( 'nav') ); ?>
 
 <div class="container">
-	<div class="">
-	    <?php if (have_posts()) ?>
-	        <?php while (have_posts()) : the_post(); ?>
-
-				<h1 class=""><?php the_field('casestudy_title'); ?></h1>
-				<p class=""><?php the_field('casestudy_description'); ?></p>
-				<p class=""><?php the_field('casestudy_bullet_points'); ?></p>
-				<p class=""><?php the_field('casestudy_challenge'); ?></p>
-				<p class=""><?php the_field('casestudy_result'); ?></p>
-				<p class=""><?php the_field('casestudy_solution'); ?></p>
-				<p class=""><?php the_field('casestudy_achievement'); ?></p>
-
- 			<?php endwhile; ?>
-
+	<div class="case-study-single content">
+	    <?php if (have_posts()) while (have_posts()) : the_post(); ?>
+			<div class="row">
+				<h1 class="col-md-12 text-center"><?php echo $casestudy_title; ?></h1>
+			</div>
+			<div class="row">
+				<div class="col-md-6 description">
+					<?php echo $casestudy_description; ?>
+				</div>
+				<div class="col-md-6 bullet_points">
+					<?php echo $casestudy_bullet_points; ?>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 challenge">
+					<h3>Challenge</h3>
+					<?php echo $casestudy_challenge; ?>
+				</div>
+				<div class="col-md-6 result">
+					<h3>Results</h3>
+					<?php echo $casestudy_result; ?>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 solution">
+					<h3>Solution</h3>
+					<?php echo $casestudy_solution; ?>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 achievement">
+					<h3>Achievement</h3>
+					<?php echo $casestudy_achievement; ?>
+				</div>
+			</div>
+		<?php endwhile; ?>
 	</div>
 </div>
 
