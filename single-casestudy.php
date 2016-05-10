@@ -20,7 +20,7 @@ get_template_parts( array( 'head') );
 get_template_parts( array( 'nav') ); ?>
 
 <div class="container">
-	<div class="case-study-single content">
+	<div class="case-study-single content top">
 	    <?php if (have_posts()) while (have_posts()) : the_post(); ?>
 			<div class="row">
 				<h1 class="col-md-12 text-center"><?php echo $casestudy_title; ?></h1>

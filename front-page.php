@@ -17,17 +17,26 @@
 $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
 ?>
 
-<div class="intro" style="background: url(<?php echo $src[0]; ?> ) !important;">
-    <div class="col-md-10 col-md-offset-1">
-        <div class="container">
-    		<div class="navWrapper">
-    		  <?php wp_nav_menu (array('theme_location' => 'page_navigation','container_class' => 'nav')); ?>
-    		</div>
+<?php get_template_parts( array( 'nav') ); ?>
 
+<div class="intro" style="background: url(<?php echo $src[0]; ?> ) !important;">
+    <div class="col-md-10 col-md-offset-1 top">
+        <div class="container">
             <div class="title">
                 <h1 class="text-right"><?php the_field('home_heading'); ?></h1>
                 <h2 class="text-right"><?php the_field('home_sub_heading'); ?></h2>
             </div>
+
+            <div class="col-md-7 col-md-offset-5 overlay">
+                <h3>Some excellent content.</h3>
+                <P>A really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really interesting story.</p>
+                <a href="<?php echo get_site_url(); ?>/case-studies">Read More<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="col-md-12 scroll-down text-center">
+                <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+            </div>
+
         </div>
     </div>
 </div>

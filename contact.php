@@ -14,7 +14,7 @@ get_template_parts( array( 'nav') );
 
 if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-    <div class="col-md-6 col-md-offset-3 content page-contact container">
+    <div class="col-md-6 col-md-offset-3 content page-contact container top">
         <h2><?php the_field('contact_heading'); ?></h2>
         <p><?php the_field('contact_sub-heading'); ?></p>
         <div><?php echo the_content(); ?></div>

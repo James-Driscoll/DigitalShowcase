@@ -11,7 +11,7 @@
 get_template_parts( array( 'head') );
 get_template_parts( array( 'nav') ); ?>
 
-<div class="col-md-10 col-md-offset-1">
+<div class="col-md-10 col-md-offset-1 top">
 	<div class="container">
 	<?php $query = new WP_Query( array('post_type' => 'casestudy', 'posts_per_page' => 100 ) ); ?>
 	<h1>Our Case Studies</h1>

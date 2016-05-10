@@ -117,11 +117,15 @@ body {
 }
 
 /* -- Nav Items ------------------------------------------------------------- */
-header {
+#header {
     background: #000;
     height: 80px;
     position: fixed;
     opacity: 1;
+    z-index: 100;
+}
+.top {
+    margin-top: 100px;
 }
 
 /* -- Navigation --------------------*/
@@ -177,9 +181,40 @@ header {
     width: 100%;
     background-repeat: no-repeat;
 }
+.overlay {
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 100px;
+    font-family: 'Titillium Web', sans-serif;
+}
+.overlay h3 {
+    color: #66CCFF;
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-top: 0px;
+}
+.overlay p {
+    color: #FFF;
+    font-size: 14px;
+}
+.overlay a {
+    font-size: 22px;
+    text-decoration: none;
+}
+.overlay a i {
+    padding-left: 10px;
+}
+.scroll-down {
+    margin-top: 80px;
+}
+.scroll-down i {
+    font-size: 60px;
+    color: #fff;
+    font-weight: lighter;
+}
 .title {
     color: #FFF;
-    margin-top: 32px;
+    margin-top: 40px;
     font-family: 'Titillium Web', sans-serif;
 }
 .title h1 {
