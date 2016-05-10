@@ -90,9 +90,9 @@ register_nav_menus(
 /* -------------------------------------------------------
     Custom Post Types
 ------------------------------------------------------- */
-add_action('init', 'register_jd_casestudies');
-function register_jd_casestudies() {
-  register_post_type( 'jd_casestudies',
+add_action('init', 'register_casestudy');
+function register_casestudy() {
+  register_post_type( 'casestudy',
     array('labels' => array(
       'name' => __('Case Studies', 'post type general name'), /* The Title of the Group */
       'singular_name' => __('Case Study', 'post type singular name'), /* The individual type */

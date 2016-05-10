@@ -13,7 +13,7 @@ get_template_parts( array( 'nav') ); ?>
 
 <div class="col-md-10 col-md-offset-1">
 	<div class="container">
-	<?php $query = new WP_Query( array('post_type' => 'jd_casestudies', 'posts_per_page' => 100 ) ); ?>
+	<?php $query = new WP_Query( array('post_type' => 'casestudy', 'posts_per_page' => 100 ) ); ?>
 	<h1>Our Case Studies</h1>
 	<?php while ( $query->have_posts() ) : $query->the_post();
 		$casestudy_title = get_field('casestudy_title', false, false);
