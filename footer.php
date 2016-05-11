@@ -31,8 +31,7 @@
         <script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.bxSlider.min.js"></script>
 
         <!-- JQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
         <!-- Bootstrap JS -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -54,6 +53,17 @@
               var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
             })();
           }
+        </script>
+
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+        	$('#filters a').click(function(e){
+        	e.preventDefault();
+        	var filter = $(this).attr('id');
+        	$('#sortable-portfolio div').show();
+        	$('#sortable-portfolio div:not(.' + filter + ')').hide();
+        });
+        });
         </script>
 
         <?php wp_footer(); ?>

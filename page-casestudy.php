@@ -19,6 +19,7 @@ get_template_parts( array( 'nav') ); ?>
 		$casestudy_title = get_field('casestudy_title', false, false);
 		$casestudy_summary = get_field('casestudy_summary', false, false);
 		$casestudy_tags = get_field('casestudy_tags', false, false); ?>
+
 		<div>
 			<a href="<?php the_permalink() ?>" class="case-study-page row">
 				<h2><?php echo $casestudy_title; ?></h2>
@@ -31,4 +32,4 @@ get_template_parts( array( 'nav') ); ?>
 	</div>
 </div>
 
-<?php get_template_parts( array( 'parts/html-footer') ); ?>
+<?php get_template_parts( array( 'footer') ); ?>

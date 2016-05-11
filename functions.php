@@ -118,11 +118,14 @@ function register_casestudy() {
       'capability_type' => 'post',
       'hierarchical' => false,
       /* the next one is important, it tells what's enabled in the post editor */
-      'supports' => array( 'title', 'editor', 'thumbnail')
+      'supports' => array( 'title', 'editor', 'thumbnail'),
+      'taxonomies' => array('category', 'post_tag')
     ) /* end of options */
   ); /* end of register post type */
 }
 
+//register_taxonomy_for_object_type( 'category', 'product' );
+//add_action( 'init', 'my_custom_post_product' );
 /* -------------------------------------------------------
     Make the site private
 ------------------------------------------------------- */
