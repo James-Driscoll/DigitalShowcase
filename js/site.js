@@ -9,3 +9,12 @@ $(document).ready(function() {
 
 
 $('select').select2();
+
+
+function displayCurrentValue(selectedObject, currentSearchTerm) {
+  return currentSearchTerm;
+}
+
+$("#e1").select2({
+  nextSearchTerm: displayCurrentValue
+});
