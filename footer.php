@@ -27,12 +27,11 @@
         </footer>
         <!-- Footer ends here -->
 
-
-        <!-- BxSlider -->
-        <script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.bxSlider.min.js"></script>
-
         <!-- JQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+        <!-- Chosen JS -->
+        <script src="<?php echo get_stylesheet_directory_uri();?>/chosen.jquery.js"></script>
 
         <!-- Bootstrap JS -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>

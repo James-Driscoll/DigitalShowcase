@@ -20,8 +20,8 @@ get_template_parts( array( 'nav') ); ?>
 		<h1>Our Case Studies</h1>
 	</div>
 
-	<form id="casestudy-category-select" class="casestudy-category-select" action="<?php the_permalink(); ?>" method="get">
-		<select multiple name="tags[]">
+	<form id="casestudy-tags-select" class="casestudy-tags-select" action="<?php the_permalink(); ?>" method="get">
+		<select class="chzn-select thetags" multiple="multiple" name="tags[]">
 			<?php jd_get_tags(); ?>
 		</select>
 		<input type="submit" name="submit" value="view" />
