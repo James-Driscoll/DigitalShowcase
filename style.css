@@ -284,18 +284,13 @@ a.case-study-page:hover {
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
-.casestudy-tags-select {
-    width: 100%;
-}
-.casestudy-tags-select .thetags {
-    width: 100%;
-    height: 50px;
-    border-radius: 5px;
-}
-.casestudy-tags-select .thetags .chosen-choices {
-    border-radius: 5px;
+.tags-select {
     font-family: 'Titillium Web', sans-serif;
 }
+.tags-select .btn {
+    margin-top: 20px;
+}
+
 
 
 /* --Case Study Single Items------------------------------------------------- */
