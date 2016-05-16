@@ -30,6 +30,9 @@
 		<!-- Chosen CSS -->
 		<link href="<?php echo get_stylesheet_directory_uri(); ?>/chosen.css?v=3" rel="stylesheet">
 
+		<!-- Select2 -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
+
         <!-- Custom Style -->
         <link href="<?php echo get_stylesheet_directory_uri(); ?>/style.css?v=3" rel="stylesheet">
 
@@ -37,10 +40,6 @@
 		<link rel="dns-prefetch" href="<?php echo get_bloginfo("url"); ?>" />
 		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
 		<link rel="dns-prefetch" href="//maps.google.com" />
-
-		<!-- Select2 -->
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
 
 		<!-- IE Stuff -->
 		<meta http-equiv="imagetoolbar" content="false" />

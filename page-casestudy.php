@@ -21,7 +21,7 @@ get_template_parts( array( 'nav') ); ?>
 	</div>
 
 	<form id="casestudy-tags-select" class="casestudy-tags-select" action="<?php the_permalink(); ?>" method="get">
-		<select class="chzn-select thetags" multiple="multiple" name="tags[]">
+		<select class="form-control select2-select" multiple="multiple" name="tags[]">
 			<?php jd_get_tags(); ?>
 		</select>
 		<input type="submit" name="submit" value="view" />
