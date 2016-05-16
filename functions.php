@@ -145,7 +145,7 @@ function create_industry_nonhierarchical_taxonomy() {
         'new_item_name' => __( 'New Industry Name' ),
         'separate_items_with_commas' => __( 'Separate Industries with commas' ),
         'add_or_remove_items' => __( 'Add or remove Industries' ),
-        'choose_from_most_used' => __( 'Choose from the most used topics' ),
+        'choose_from_most_used' => __( 'Choose from the most used Industries' ),
         'menu_name' => __( 'Industries' ),
     );
     register_taxonomy('industry','casestudy',array(
@@ -217,7 +217,7 @@ function create_programme_nonhierarchical_taxonomy() {
         'show_admin_column' => true,
         'update_count_callback' => '_update_post_term_count',
         'query_var' => true,
-        'rewrite' => array( 'slug' => 'topic' ),
+        'rewrite' => array( 'slug' => 'programme' ),
     ));
 }
 
@@ -241,16 +241,65 @@ function create_partner_nonhierarchical_taxonomy() {
         'choose_from_most_used' => __( 'Choose from the most used topics' ),
         'menu_name' => __( 'Partners' ),
     );
-    register_taxonomy('partners','casestudy',array(
+    register_taxonomy('partner','casestudy',array(
         'hierarchical' => false,
         'labels' => $labels,
         'show_ui' => true,
         'show_admin_column' => true,
         'update_count_callback' => '_update_post_term_count',
         'query_var' => true,
-        'rewrite' => array( 'slug' => 'topic' ),
+        'rewrite' => array( 'slug' => 'partner' ),
     ));
 }
+
+function print_bs_customtaxonomies( $taxonomy ) {
+    //$terms = get_terms($taxonomy);
+    $terms = get_terms( array(
+    'taxonomy' => $taxonomy,
+    'hide_empty' => false,
+    ) );
+    if ( $terms ) {
+        foreach ( $terms as $term ) {
+            printf( '<li><a href="#">%s</a></li>', esc_attr( $term->name ), esc_html( $term->name ) );
+        }
+    }
+}
+
+function fjarrett_custom_taxonomy_dropdown( $taxonomy ) {
+	$terms = get_terms( $taxonomy );
+	if ( $terms ) {
+		printf( '<select name="%s" class="postform">', esc_attr( $taxonomy ) );
+		foreach ( $terms as $term ) {
+			printf( '<option value="%s">%s</option>', esc_attr( $term->slug ), esc_html( $term->name ) );
+		}
+		print( '</select>' );
+	}
+}
+
+
+function fjarrett_custom_taxonomy_dropdown_two( $taxonomy, $orderby = 'date', $order = 'DESC', $limit = '-1', $name, $show_option_all = null, $show_option_none = null ) {
+	$args = array(
+		'orderby' => $orderby,
+		'order' => $order,
+		'number' => $limit,
+	);
+	$terms = get_terms( $taxonomy, $args );
+	$name = ( $name ) ? $name : $taxonomy;
+	if ( $terms ) {
+		printf( '<select name="%s" class="postform">', esc_attr( $name ) );
+		if ( $show_option_all ) {
+			printf( '<option value="0">%s</option>', esc_html( $show_option_all ) );
+		}
+		if ( $show_option_none ) {
+			printf( '<option value="-1">%s</option>', esc_html( $show_option_none ) );
+		}
+		foreach ( $terms as $term ) {
+			printf( '<option value="%s">%s</option>', esc_attr( $term->slug ), esc_html( $term->name ) );
+		}
+		print( '</select>' );
+	}
+}
+
 
 /* -------------------------------------------------------
     Make the site private
