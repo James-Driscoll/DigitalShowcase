@@ -118,8 +118,8 @@ function register_casestudy() {
       'capability_type' => 'post',
       'hierarchical' => false,
       /* the next one is important, it tells what's enabled in the post editor */
-      'supports' => array( 'title', 'editor', 'thumbnail')
-      //'taxonomies' => array('category', 'post_tag')
+      'supports' => array( 'title', 'editor', 'thumbnail'),
+      'taxonomies' => array('category', 'post_tag')
     ) /* end of options */
   ); /* end of register post type */
 }
@@ -264,15 +264,16 @@ function print_bs_customtaxonomies( $taxonomy ) {
         }
     }
 }
-
-function fjarrett_custom_taxonomy_dropdown( $taxonomy ) {
-	$terms = get_terms( $taxonomy );
+//fjarret
+function jd_get_tags() {
+    $terms = get_terms( array(
+        'taxonomy' => 'post_tag',
+        'hide_empty' => false,
+    ) );
 	if ( $terms ) {
-		printf( '<select name="%s" class="postform">', esc_attr( $taxonomy ) );
 		foreach ( $terms as $term ) {
 			printf( '<option value="%s">%s</option>', esc_attr( $term->slug ), esc_html( $term->name ) );
 		}
-		print( '</select>' );
 	}
 }
 
@@ -299,7 +300,6 @@ function fjarrett_custom_taxonomy_dropdown_two( $taxonomy, $orderby = 'date', $o
 		print( '</select>' );
 	}
 }
-
 
 /* -------------------------------------------------------
     Make the site private

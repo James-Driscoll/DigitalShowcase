@@ -27,6 +27,7 @@
         </footer>
         <!-- Footer ends here -->
 
+
         <!-- BxSlider -->
         <script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.bxSlider.min.js"></script>
 
