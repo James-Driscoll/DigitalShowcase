@@ -107,6 +107,7 @@ textarea {
 html {
     height: 100%;
     margin: 0;
+    margin-top: 0;
     padding: 0;
 }
 body {
@@ -115,26 +116,27 @@ body {
     padding: 0;
     background: #f7f7f7;
 }
-
-/* -- Nav Items ------------------------------------------------------------- */
-#header {
-    background: #000;
-    height: 80px;
-    position: fixed;
-    opacity: 1;
-    z-index: 100;
-}
 .top {
     margin-top: 100px;
 }
 
-/* -- Navigation --------------------*/
+/* -- Nav Items ------------------------------------------------------------- */
+#header {
+    background: #000;
+    height: 60px;
+    position: fixed;
+    opacity: 1;
+    z-index: 100;
+}
  .navWrapper {
-     margin-top: 30px;
+     margin-top: 20px;
  }
  .navWrapper .nav ul {
-    padding-left: 0px;
     float: right;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    height: 20px;
+    line-height: 20px;
 }
  .navWrapper .nav ul li {
      display: inline;
@@ -144,7 +146,7 @@ body {
     text-decoration: none;
     font-family: 'Titillium Web', sans-serif;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 14px;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
@@ -181,53 +183,98 @@ body {
     width: 100%;
     background-repeat: no-repeat;
 }
-.overlay {
-    padding: 30px;
-    background-color: rgba(0, 0, 0, 0.6);
-    margin-top: 100px;
-    font-family: 'Titillium Web', sans-serif;
-}
-.overlay h3 {
-    color: #66CCFF;
-    font-size: 30px;
-    text-transform: capitalize;
-    margin-top: 0px;
-}
-.overlay p {
-    color: #FFF;
-    font-size: 14px;
-}
-.overlay a {
-    font-size: 22px;
-    text-decoration: none;
-}
-.overlay a i {
-    padding-left: 10px;
-}
-.scroll-down {
-    margin-top: 80px;
-}
-.scroll-down i {
-    font-size: 60px;
-    color: #fff;
-    font-weight: lighter;
-}
+
+/* -- Title Items ----------------------- */
 .title {
     color: #FFF;
-    margin-top: 40px;
+    margin-top: 130px;
     font-family: 'Titillium Web', sans-serif;
 }
 .title h1 {
-    font-size: 70px;
+    font-size: 56px;
     font-weight: normal;
     text-transform: uppercase;
     font-family: 'Titillium Web', sans-serif;
 }
 .title h2 {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: normal;
     font-family: 'Titillium Web', sans-serif;
 }
+
+/* -- Overlay Items --------------------- */
+.overlay {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 120px;
+    font-family: 'Titillium Web', sans-serif;
+}
+.overlay h3 {
+    color: #66CCFF;
+    font-size: 26px;
+    text-transform: capitalize;
+    margin-top: 0px;
+}
+.overlay p {
+    color: #FFF;
+    font-size: 13px;
+}
+.overlay a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #66CCFF;
+}
+.overlay a:hover,
+.overlay a:hover i {
+    color: #0099CC;
+}
+.overlay a i {
+    padding-left: 10px;
+    color: #66CCFF;
+}
+
+/* -- Scroll-Down Items ----------------- */
+.scroll-down {
+    margin-top: 40px;
+}
+.scroll-down i {
+    font-size: 50px;
+    color: #fff;
+    font-weight: lighter;
+}
+
+.button {
+    display: inline-block;
+    padding: 1em;
+    background-color: #79BD9A;
+    text-decoration: none;
+    color: white;
+}
+.buttons {
+    margin-top: 50px;
+    color: 14px;
+    font-family: 'Titillium Web', sans-serif;
+}
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+}
+.button:hover,
+.button:focus,
+.button:active {
+  transform: translateY(-8px);
+}
+
+
+
+
 /* -- Facets Items ----------------------- */
 .page-home {
     margin-top: 100px;

@@ -19,29 +19,59 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 
 <?php get_template_parts( array( 'nav') ); ?>
 
+<?php
+    $heading = get_field('heading', false, false);
+    $sub_heading = get_field('sub_heading', false, false);
+?>
+
 <div class="intro" style="background: url(<?php echo $src[0]; ?> ) !important;">
-    <div class="col-md-10 col-md-offset-1 top">
-        <div class="container">
-            <div class="title">
-                <h1 class="text-right"><?php the_field('home_heading'); ?></h1>
-                <h2 class="text-right"><?php the_field('home_sub_heading'); ?></h2>
-            </div>
+    <div class="container">
 
-            <div class="col-md-7 col-md-offset-5 overlay">
-                <h3>Some excellent content.</h3>
-                <P>A really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really interesting story.</p>
-                <a href="<?php echo get_site_url(); ?>/case-studies">Read More<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
-            </div>
-
-            <div class="col-md-12 scroll-down text-center">
-                <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
-            </div>
-
+        <!-- Title -->
+        <div class="row title">
+            <h1 class="text-right"><?php echo $heading; ?></h1>
+            <h2 class="text-right"><?php echo $sub_heading; ?></h2>
         </div>
+        <!-- / Title -->
+
+        <!-- Buttons -->
+        <div class="row text-center buttons">
+            <a href="#" class="mybutton btn btn-primary">Read More Case Studies</a>
+            <a href="#" class="mybutton btn btn-primary">Read More Articles</a>
+        </div>
+        <!-- / Buttons -->
+
+        <!-- Optional Article Overlay -->
+        <?php $article_enabled = get_field('article_enabled', false, false);
+        if ( $article_enabled == 'enabled' ) {
+            $article_title = get_field('article_title', false, false);
+            $article_description = get_field('article_description', false, false);
+            $article_link_text = get_field('article_link_text', false, false);
+            $article_link_url = get_field('article_link_url', false, false); ?>
+            <div class="row">
+                <div class="col-md-7 col-md-offset-5 overlay">
+                    <h3><?php echo $article_title; ?></h3>
+                    <P><?php echo $article_description; ?></p>
+                    <a href="<?php echo get_site_url() . $article_link_url; ?>"><?php echo $article_link_text; ?><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        <?php }; ?>
+        <!-- / Optional Article Overlay -->
+
+        <!-- Scroll Down -->
+        <div class="row">
+            <div class="col-md-12 scroll-down text-center">
+                <a href="#strapline" rel="m_PageScroll2id" class="mPS2id-clicked">
+                    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+        <!-- / Scroll Down -->
+
     </div>
 </div>
 
-<div class="col-md-12 page-home">
+<div class="col-md-12 page-home mPS2id-target" id="strapline">
     <div class="col-md-12 strap-line">
         <h2 class="text-center"><?php the_field('home_strapline_heading'); ?></h2>
         <p class="text-center"><?php the_field('home_strapline_sub_heading'); ?></p>
