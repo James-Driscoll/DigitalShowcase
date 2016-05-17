@@ -13,7 +13,7 @@ get_template_parts( array( 'nav') ); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<div class="col-md-10 col-md-offset-1 top">
+<div class="col-md-10 col-md-offset-1 content top">
 	<div class="container">
 
 	<div class="row">
