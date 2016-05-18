@@ -187,7 +187,7 @@ body {
 /* -- Title Items ----------------------- */
 .title {
     color: #FFF;
-    margin-top: 130px;
+    margin-top: 90px;
     font-family: 'Titillium Web', sans-serif;
 }
 .title h1 {
@@ -202,6 +202,9 @@ body {
     font-family: 'Titillium Web', sans-serif;
 }
 
+.carousel {
+    margin-top: 50px;
+}
 /* -- Overlay Items --------------------- */
 .overlay {
     padding: 20px;
@@ -223,6 +226,7 @@ body {
     font-size: 18px;
     text-decoration: none;
     color: #66CCFF;
+    float: right;
 }
 .overlay a:hover,
 .overlay a:hover i {
