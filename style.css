@@ -114,7 +114,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: #f7f7f7;
+    background: #FFF;
 }
 .top {
     margin-top: 100px;
@@ -122,8 +122,8 @@ body {
 
 /* -- Nav Items ------------------------------------------------------------- */
 #header {
-    background: #000;
-    height: 60px;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 120px;
     position: fixed;
     opacity: 1;
     z-index: 100;
@@ -136,7 +136,7 @@ body {
     padding-left: 0px;
     margin-bottom: 0px;
     height: 20px;
-    line-height: 20px;
+    line-height: 80px;
 }
  .navWrapper .nav ul li {
      display: inline;
@@ -152,7 +152,7 @@ body {
     -ms-transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
-    color: #66CCFF;
+    color: #FFF;
     padding: 10px;
 }
  .navWrapper .nav a:hover {
@@ -187,11 +187,10 @@ body {
 /* -- Title Items ----------------------- */
 .title {
     color: #FFF;
-    margin-top: 90px;
     font-family: 'Titillium Web', sans-serif;
 }
 .title h1 {
-    font-size: 56px;
+    font-size: 30px;
     font-weight: normal;
     text-transform: uppercase;
     font-family: 'Titillium Web', sans-serif;
@@ -203,7 +202,7 @@ body {
 }
 
 .carousel {
-    margin-top: 50px;
+    height: 600px;
 }
 /* -- Overlay Items --------------------- */
 .overlay {
@@ -243,41 +242,59 @@ body {
 }
 .scroll-down i {
     font-size: 50px;
-    color: #fff;
+    color: #66CCFF;
     font-weight: lighter;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -ms-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+}
+.scroll-down a:hover i  {
+    color: #0099CC;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -ms-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
 }
 
-.button {
-    display: inline-block;
-    padding: 1em;
-    background-color: #79BD9A;
-    text-decoration: none;
-    color: white;
+/* -- Buttons Items --------------------- */
+.mybutton {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    background: none;
+    color: #66CCFF;
+    border: 2px solid #66CCFF;
+    font-size: 16px;
+    border-radius: 5px;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -ms-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
 }
+button.mybutton:hover {
+    border: 2px solid #66CCFF;
+    background: #66CCFF;
+    color: #FFF;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -ms-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+}
+button.mybutton:focus,
+a.mybutton:active {
+    background-color: #66CCFF;
+}
+
 .buttons {
     margin-top: 50px;
     color: 14px;
     font-family: 'Titillium Web', sans-serif;
 }
-.button {
-  display: inline-block;
-  vertical-align: middle;
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  transition-duration: 0.3s;
-  transition-property: transform;
-  transition-timing-function: ease-out;
-}
-.button:hover,
-.button:focus,
-.button:active {
-  transform: translateY(-8px);
-}
-
-
-
 
 /* -- Facets Items ----------------------- */
 .page-home {
@@ -371,14 +388,14 @@ a.case-study-page:hover {
 
 /* --Footer Items------------------------------------------------------------ */
 footer {
-    background: #000;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 120px;
 }
 footer .social {
     margin: 0;
     padding: 0;
     list-style: none;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    line-height: 120px;
 }
 footer .social li {
     display: inline-block;

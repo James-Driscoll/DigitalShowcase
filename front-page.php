@@ -13,20 +13,7 @@
 <?php get_template_parts( array( 'head') ); ?>
 <?php get_template_parts( array( 'nav') ); ?>
 
-<?php
-    $heading = get_field('heading', false, false);
-    $sub_heading = get_field('sub_heading', false, false);
-?>
-
 <div class="intro">
-    <div class="container">
-        <!-- Title -->
-        <div class="row title">
-            <h1 class="text-right"><?php echo $heading; ?></h1>
-            <h2 class="text-right"><?php echo $sub_heading; ?></h2>
-        </div>
-        <!-- / Title -->
-    </div>
 
     <!-- Carousel -->
     <div id="home_carousel" class="carousel slide" data-ride="carousel">
@@ -146,31 +133,42 @@
                     <?php } ?>
                 <?php } ?>
             <?php } ?>
+        </div>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#home_carousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#home_carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#home_carousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#home_carousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
     <!-- / Carousel -->
 
+    <!-- Buttons -->
+    <?php $button_1_text = get_field('button_1_text');
+    $button_1_link = get_field('button_1_link');
+    $button_2_text = get_field('button_2_text');
+    $button_2_link = get_field('button_2_link'); ?>
+    <div class="container">
+        <div class="row text-center buttons">
+            <button href="<?php echo $button_1_link ?>" class="mybutton"><?php echo $button_1_text ?></button>
+            <button href="<?php echo $button_2_link ?>/case-studies" class="mybutton"><?php echo $button_2_text ?></button>
+        </div>
+    </div>
+    <!-- / Buttons -->
 
-        <div class="container">
-            <!-- Scroll Down -->
-            <div class="row">
-                <div class="col-md-12 scroll-down text-center">
-                    <a href="#strapline" rel="m_PageScroll2id" class="mPS2id-clicked">
-                        <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
-                    </a>
-                </div>
+    <!-- Scroll Down -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 scroll-down text-center">
+                <a href="#strapline" rel="m_PageScroll2id" class="mPS2id-clicked">
+                    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+                </a>
             </div>
-            <!-- / Scroll Down -->
+        </div>
+        <!-- / Scroll Down -->
 
     </div>
 </div>

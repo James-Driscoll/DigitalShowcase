@@ -4,7 +4,7 @@
         <footer class="col-xs-12">
             <ul class="social text-center">
                 <li class="email">
-                    <a href="mailto:getintocuh@marketing.teradata.com">
+                    <a href="<?php echo get_site_url() ?>/contact">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
                     </a>
                 </li>
