@@ -20,7 +20,7 @@ get_template_parts( array( 'nav') ); ?>
 		<?php $casestudies_heading = get_field('casestudies_heading', false, false);
 	    $casestudies_sub_heading = get_field('casestudies_sub_heading', false, false); ?>
 	    <div class="row">
-            <div class="heading">
+            <div class="page-heading">
                 <h2><?php echo $casestudies_heading; ?></h2>
                 <p><?php echo $casestudies_sub_heading; ?></p>
             </div>

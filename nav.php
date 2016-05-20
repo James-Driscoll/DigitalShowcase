@@ -11,8 +11,8 @@
 		<div class="container">
 			<div class="col-md-6"
 				<!-- Site Heading -->
-				<?php $site_heading = get_field('site_heading', false, false);
-				$site_sub_heading = get_field('site_sub_heading', false, false); ?>
+				<?php $site_heading = get_bloginfo('name');
+				$site_sub_heading = get_bloginfo('description'); ?>
 				<div class="title">
 					<h1 class="text-left"><?php echo $site_heading; ?></h1>
 					<h2 class="text-left"><?php echo $site_sub_heading; ?></h2>

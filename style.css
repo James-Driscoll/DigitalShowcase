@@ -94,7 +94,7 @@ textarea {
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
-    color: #000;
+    color: #3b3a36;
     padding: 0.2em 0;
 }
 
@@ -114,11 +114,11 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: #FFF;
+    background: #f9f9f9;
 }
 .content {
     min-height: 650px;
-    margin-top: 100px;
+    margin-top: 180px;
     margin-bottom: 60px;
 }
 .row {
@@ -126,12 +126,32 @@ body {
     margin-left: 0px;
 }
 
-/* -- Nav Items ------------------------------------------------------------- */
+/* -- Header Items ---------------------------------------------------------- */
 .header {
     background-color: rgba(0, 0, 0, 0.6);
     height: 120px;
     z-index: 100;
+    position: fixed;
 }
+
+/* -- Title Items ----------------------- */
+.title {
+    color: #f9f9f9;
+    font-family: 'Titillium Web', sans-serif;
+}
+.title h1 {
+    font-size: 30px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: 'Titillium Web', sans-serif;
+}
+.title h2 {
+    font-size: 14px;
+    font-weight: normal;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/* -- Navigation Items ------------------ */
  .navWrapper {
      margin-top: 20px;
  }
@@ -156,7 +176,7 @@ body {
     -ms-transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
-    color: #FFF;
+    color: #f9f9f9;
     padding: 10px;
 }
  .navWrapper .nav a:hover {
@@ -165,8 +185,8 @@ body {
     -ms-transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
-    color: #0099CC;
-    border-bottom: 2px solid #0099CC;
+    color: #89bdd3;
+    border-bottom: 2px solid #89bdd3;
 }
  .navWrapper .nav ul .current-page-ancestor:hover a,
  .navWrapper .nav ul .current-page-ancestor a,
@@ -174,35 +194,24 @@ body {
  .navWrapper .nav ul .current-menu-item:hover a,
  .navWrapper .nav ul .current-page-item a,
  .navWrapper .nav ul .current-menu-item a, {
-    color: #000;
+    color: #89bdd3;
 }
  .navWrapper .nav ul .current-menu-item a {
     font-weight: bold;
+    color: #9ad3de;
 }
 
 /* -- Front-Page Items ------------------------------------------------------ */
-/* -- Intro Items ----------------------- */
-.intro {
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
+/* -- Carousel Items -------------------- */
+.carousel .carousel-control .glyphicon-chevron-left,
+.carousel .carousel-control .glyphicon-chevron-right {
+    color: #9ad3de;
 }
-
-/* -- Title Items ----------------------- */
-.title {
-    color: #FFF;
-    font-family: 'Titillium Web', sans-serif;
+.carousel .carousel-indicators li {
+    border-color: #9ad3de;
 }
-.title h1 {
-    font-size: 30px;
-    font-weight: normal;
-    text-transform: uppercase;
-    font-family: 'Titillium Web', sans-serif;
-}
-.title h2 {
-    font-size: 14px;
-    font-weight: normal;
-    font-family: 'Titillium Web', sans-serif;
+.carousel li.active {
+    background-color: #9ad3de;
 }
 
 /* -- Overlay Items --------------------- */
@@ -213,28 +222,28 @@ body {
     font-family: 'Titillium Web', sans-serif;
 }
 .overlay h3 {
-    color: #66CCFF;
+    color: #9ad3de;
     font-size: 26px;
     text-transform: capitalize;
     margin-top: 0px;
 }
 .overlay p {
-    color: #FFF;
+    color: #f9f9f9;
     font-size: 13px;
 }
 .overlay a {
     font-size: 18px;
     text-decoration: none;
-    color: #66CCFF;
+    color: #9ad3de;
     float: right;
 }
 .overlay a:hover,
 .overlay a:hover i {
-    color: #0099CC;
+    color: #89bdd3;
 }
 .overlay a i {
     padding-left: 10px;
-    color: #66CCFF;
+    color: #9ad3de;
 }
 
 /* -- Scroll-Down Items ----------------- */
@@ -252,7 +261,7 @@ body {
     transition: all .1s ease-in;
 }
 .scroll-down a:hover i  {
-    color: #0099CC;
+    color: #9ad3de;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
@@ -267,8 +276,8 @@ body {
     padding: 10px;
     margin: 10px;
     background: none;
-    color: #66CCFF;
-    border: 2px solid #66CCFF;
+    color: #9ad3de;
+    border: 2px solid #9ad3de;
     font-size: 16px;
     border-radius: 5px;
     -moz-transition: all .1s ease-in;
@@ -279,9 +288,9 @@ body {
 }
 a.mybutton:hover,
 .mybutton:hover {
-    border: 2px solid #66CCFF;
-    background: #66CCFF;
-    color: #FFF;
+    border: 2px solid #9ad3de;
+    background: #9ad3de;
+    color: #f9f9f9;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
@@ -291,12 +300,18 @@ a.mybutton:hover,
 }
 a.mybutton:focus,
 a.mybutton:active {
-    background-color: #66CCFF;
+    background-color: #89bdd3;
 }
 
 .buttons {
     margin-top: 50px;
     margin-bottom: 50px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.page-heading h2,
+.page-heaing p {
+    color: #3b3a36;
     font-family: 'Titillium Web', sans-serif;
 }
 
@@ -313,7 +328,7 @@ a.mybutton:active {
 .page-home .item  i {
     font-size: 70px;
     display:block;
-    color: #66CCFF;
+    color: #9ad3de;
 }
 .page-home .strap-line {
     margin-bottom: 100px;
@@ -329,10 +344,10 @@ a.mybutton:active {
     height: 500px;
     margin: 10px;
     padding: 10px;
-    color: #000;
+    color: #3b3a36;
     display: block;
     font-family: 'Titillium Web', sans-serif;
-    border: 1px solid #fff;
+    border: 1px solid #f9f9f9;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
@@ -340,7 +355,7 @@ a.mybutton:active {
     transition: all .1s ease-in;
 }
 .tile a:hover {
-    border: 1px solid #66CCFF;
+    border: 1px solid #9ad3de;
     text-decoration: none;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
@@ -369,18 +384,18 @@ a.mybutton:active {
     border-radius: 7px;
 }
 .case-study-single h1 {
-    color: #66CCFF;
+    color: #9ad3de;
     font-family: 'Titillium Web', sans-serif;
     margin-top: 50px;
     margin-bottom: 50px;
 }
 .case-study-single h3 {
     margin-top: 40px;
-    color: #66CCFF;
+    color: #9ad3de;
     font-family: 'Titillium Web', sans-serif;
 }
 .case-study-single .bullet_points {
-    background-color: #66CCFF;
+    background-color: #9ad3de;
     padding: 10px;
 }
 .case-study-single .bullet_points ul {
@@ -405,17 +420,17 @@ a.mybutton:active {
 .footer .social li a {
     margin: 30px;
 }
-.footer .social li a:hover i {
-    color: #0099CC;
+.footer .social li a i {
+    color: #9ad3de;
+    font-size: 30px;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
 }
-.footer .social li a i {
-    color: #66CCFF;
-    font-size: 30px;
+.footer .social li a:hover i {
+    color: #89bdd3;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
@@ -498,7 +513,7 @@ a.item:hover {
 /* --Single Items-----------------------------*/
 .cp-single {
     font-family: 'Lato', 'Helvetica', 'Arial';
-    color: #000;
+    color: #3b3a36;
     font-size: 14px;
     font-weight: normal;
 }
@@ -521,7 +536,7 @@ a.item:hover {
 }
 .pc-title {
     font-family: 'Lato', 'Helvetica', 'Arial';
-    color: #000;
+    color: #3b3a36;
     font-size: 18px;
     font-weight: normal;
 }
