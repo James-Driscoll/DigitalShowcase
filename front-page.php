@@ -13,7 +13,7 @@
 <?php get_template_parts( array( 'head') ); ?>
 <?php get_template_parts( array( 'nav') ); ?>
 
-<div class="intro">
+<div>
 
     <!-- Carousel -->
     <div id="home_carousel" class="carousel slide" data-ride="carousel">
@@ -159,76 +159,7 @@
     </div>
     <!-- / Buttons -->
 
-    <!-- Scroll Down -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 scroll-down text-center">
-                <a href="#strapline" rel="m_PageScroll2id" class="mPS2id-clicked">
-                    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
-                </a>
-            </div>
-        </div>
-        <!-- / Scroll Down -->
-
-    </div>
 </div>
 
-<div class="col-md-12 page-home mPS2id-target" id="strapline">
-    <div class="col-md-12 strap-line">
-        <h2 class="text-center"><?php the_field('home_strapline_heading'); ?></h2>
-        <p class="text-center"><?php the_field('home_strapline_sub_heading'); ?></p>
-    </div>
-
-    <?php $rows = get_field('home_icon_rows', false, false);
-    if ( $rows == 1 ) { ?>
-        <div class="col-md-4 item item-top">
-            <i class="fa <?php the_field('home_item_1_icon'); ?> text-center" aria-hidden="true"></i>
-            <h3 class="text-center"><?php the_field('home_item_1_heading'); ?></h3>
-            <p class="text-center"><?php the_field('home_item_1_description'); ?></p>
-        </div>
-        <div class="col-md-4 item item-top">
-            <i class="fa <?php the_field('home_item_2_icon'); ?> text-center" aria-hidden="true"></i>
-            <h3 class="text-center"><?php the_field('home_item_2_heading'); ?></h3>
-            <p class="text-center"><?php the_field('home_item_2_description'); ?></p>
-        </div>
-        <div class="col-md-4 item item-top">
-            <i class="fa <?php the_field('home_item_3_icon'); ?> text-center" aria-hidden="true"></i>
-            <h3 class="text-center"><?php the_field('home_item_3_heading'); ?></h3>
-            <p class="text-center"><?php the_field('home_item_3_description'); ?></p>
-        </div>
-    <?php }
-    if ( $rows == 2 ) { ?>
-        <div class="col-md-4 item item-top">
-            <i class="fa <?php the_field('home_item_1_icon'); ?> text-center" aria-hidden="true"></i>
-            <h3 class="text-center"><?php the_field('home_item_1_heading'); ?></h3>
-            <p class="text-center"><?php the_field('home_item_1_description'); ?></p>
-        </div>
-        <div class="col-md-4 item item-top">
-            <i class="fa <?php the_field('home_item_2_icon'); ?> text-center" aria-hidden="true"></i>
-            <h3 class="text-center"><?php the_field('home_item_2_heading'); ?></h3>
-            <p class="text-center"><?php the_field('home_item_2_description'); ?></p>
-        </div>
-        <div class="col-md-4 item item-top">
-            <i class="fa <?php the_field('home_item_3_icon'); ?> text-center" aria-hidden="true"></i>
-            <h3 class="text-center"><?php the_field('home_item_3_heading'); ?></h3>
-            <p class="text-center"><?php the_field('home_item_3_description'); ?></p>
-        </div>
-        <div class="col-md-4 item">
-            <i class="fa <?php the_field('home_item_4_icon'); ?> text-center" aria-hidden="true"></i>
-            <h3 class="text-center"><?php the_field('home_item_4_heading'); ?></h3>
-            <p class="text-center"><?php the_field('home_item_4_description'); ?></p>
-        </div>
-        <div class="col-md-4 item">
-            <i class="fa <?php the_field('home_item_5_icon'); ?> text-center" aria-hidden="true"></i>
-            <h3 class="text-center"><?php the_field('home_item_5_heading'); ?></h3>
-            <p class="text-center"><?php the_field('home_item_5_description'); ?></p>
-        </div>
-        <div class="col-md-4 item">
-            <i class="fa <?php the_field('home_item_6_icon'); ?> text-center" aria-hidden="true"></i>
-            <h3 class="text-center"><?php the_field('home_item_6_heading'); ?></h3>
-            <p class="text-center"><?php the_field('home_item_6_description'); ?></p>
-        </div>
-    <?php } ?>
-</div>
 
 <?php get_template_parts( array( 'footer') ); ?>

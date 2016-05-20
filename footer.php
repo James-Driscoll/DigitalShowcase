@@ -1,30 +1,34 @@
 
 
         <!-- Footer begins here -->
-        <footer class="col-xs-12">
-            <ul class="social text-center">
-                <li class="email">
-                    <a href="<?php echo get_site_url() ?>/contact">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li class="instagram">
-                    <a href="https://www.instagram.com/teradata.marketing.apps/" target="_blank">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li class="facebook">
-                    <a href="https://www.facebook.com/TeradataAppsUKI" target="_blank">
-                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li class="twitter">
-                    <a href="https://twitter.com/teradataappsuki" target="_blank">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                </li>
-            </ul>
-        </footer>
+        <div class="row footer">
+            <div class="container">
+                <div class="col-xs-12">
+                    <ul class="social text-center">
+                        <li class="email">
+                            <a href="<?php echo get_site_url() ?>/contact">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="instagram">
+                            <a href="https://www.instagram.com/teradata.marketing.apps/" target="_blank">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="facebook">
+                            <a href="https://www.facebook.com/TeradataAppsUKI" target="_blank">
+                                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="twitter">
+                            <a href="https://twitter.com/teradataappsuki" target="_blank">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <!-- Footer ends here -->
 
         <!-- JQuery -->

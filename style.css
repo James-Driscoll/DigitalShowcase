@@ -116,16 +116,15 @@ body {
     padding: 0;
     background: #FFF;
 }
-.top {
-    margin-top: 100px;
+.content {
+    min-height: 600px;
+    margin-top: 170px;
 }
 
 /* -- Nav Items ------------------------------------------------------------- */
-#header {
+.header {
     background-color: rgba(0, 0, 0, 0.6);
     height: 120px;
-    position: fixed;
-    opacity: 1;
     z-index: 100;
 }
  .navWrapper {
@@ -292,7 +291,7 @@ a.mybutton:active {
 
 .buttons {
     margin-top: 50px;
-    color: 14px;
+    margin-bottom: 50px;
     font-family: 'Titillium Web', sans-serif;
 }
 
@@ -318,12 +317,6 @@ a.mybutton:active {
 .page-home .strap-line h2 {
     font-size: 40px;
     font-family: 'Droid Serif', serif;
-}
-
-.content {
-    min-height: 700px;
-    margin-top: 100px;
-    margin-bottom: 100px;
 }
 
 /* --Case Study Page Items--------------------------------------------------- */
@@ -387,24 +380,24 @@ a.case-study-page:hover {
 }
 
 /* --Footer Items------------------------------------------------------------ */
-footer {
+.footer {
     background-color: rgba(0, 0, 0, 0.6);
     height: 120px;
 }
-footer .social {
+.footer .social {
     margin: 0;
     padding: 0;
     list-style: none;
     line-height: 120px;
 }
-footer .social li {
+.footer .social li {
     display: inline-block;
     text-align: center;
 }
-footer .social li a {
+.footer .social li a {
     margin: 30px;
 }
-footer .social li a:hover i {
+.footer .social li a:hover i {
     color: #0099CC;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
@@ -412,7 +405,7 @@ footer .social li a:hover i {
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
 }
-footer .social li a i {
+.footer .social li a i {
     color: #66CCFF;
     font-size: 30px;
     -moz-transition: all .1s ease-in;

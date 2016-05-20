@@ -14,10 +14,15 @@ get_template_parts( array( 'nav') );
 
 if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-    <div class="col-md-6 col-md-offset-3 content page-contact container top">
-        <h2><?php the_field('contact_heading'); ?></h2>
-        <p><?php the_field('contact_sub-heading'); ?></p>
-        <div><?php echo the_content(); ?></div>
+    <?php $contact_heading = get_field('contact_heading', false, false);
+    $contact_sub_heading = get_field('contact_sub_heading', false, false); ?>
+
+    <div class="row">
+        <div class="container content page-contact">
+            <h2><?php echo $contact_heading; ?></h2>
+            <p><?php echo $contact_sub_heading; ?></p>
+            <div><?php the_content(); ?></div>
+        </div>
     </div>
 
 <?php endwhile;
