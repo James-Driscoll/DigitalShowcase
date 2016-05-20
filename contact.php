@@ -19,7 +19,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
     <div class="row">
         <div class="container">
-                <div class="content page-contact">
+            <div class="content page-contact">
                 <h2><?php echo $contact_heading; ?></h2>
                 <p><?php echo $contact_sub_heading; ?></p>
                 <div><?php the_content(); ?></div>
