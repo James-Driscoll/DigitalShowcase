@@ -18,10 +18,12 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     $contact_sub_heading = get_field('contact_sub_heading', false, false); ?>
 
     <div class="row">
-        <div class="container content page-contact">
-            <h2><?php echo $contact_heading; ?></h2>
-            <p><?php echo $contact_sub_heading; ?></p>
-            <div><?php the_content(); ?></div>
+        <div class="container">
+                <div class="content page-contact">
+                <h2><?php echo $contact_heading; ?></h2>
+                <p><?php echo $contact_sub_heading; ?></p>
+                <div><?php the_content(); ?></div>
+            </div>
         </div>
     </div>
 

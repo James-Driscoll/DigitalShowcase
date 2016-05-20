@@ -1,9 +1,9 @@
 
 
         <!-- Footer begins here -->
-        <div class="row footer">
-            <div class="container">
-                <div class="col-xs-12">
+        <div class="row">
+        	<div class="col-md-12 footer">
+        		<div class="container">
                     <ul class="social text-center">
                         <li class="email">
                             <a href="<?php echo get_site_url() ?>/contact">
