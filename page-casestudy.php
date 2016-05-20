@@ -74,7 +74,40 @@ get_template_parts( array( 'nav') ); ?>
 					</div>
 				<?php endwhile; ?>
 			</div>
-		<?php }; ?>
+		<?php } else {
+
+			$args = array(
+				'post_type' => 'casestudy',
+				'tax_query' => array(
+					'relation' => 'AND',
+					array(
+						'taxonomy' => 'post_tag',
+						'field'    => 'slug',
+						'terms'    => 'highlight',
+						'operator' => 'AND',
+					),
+				),
+			);
+
+			$query = new WP_Query( $args ); ?>
+			<div class="row">
+				<?php while ( $query->have_posts() ) : $query->the_post();
+					$casestudy_title = get_field('casestudy_title', false, false);
+					$casestudy_summary = get_field('casestudy_summary', false, false);
+					$casestudy_tags = get_field('casestudy_tags', false, false);
+					$casestudy_image = get_field('casestudy_image') ?>
+					<div class="tile col-md-4">
+						<a href="<?php the_permalink() ?>">
+							<img src="<?php echo $casestudy_image; ?>" class="img-responsive"/>
+							<h2><?php echo $casestudy_title; ?></h2>
+							<p><?php echo $casestudy_summary; ?></p>
+							<p><?php echo $casestudy_tags; ?></p>
+							<?php  wp_reset_postdata(); ?>
+						</a>
+					</div>
+				<?php endwhile; ?>
+			</div>
+		<?php } ?>
 		<!-- / Returned Case Study Tiles -->
 
 	</div>
