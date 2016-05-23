@@ -114,7 +114,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: #f9f9f9;
+    background: #fff;
 }
 .content {
     min-height: 650px;
@@ -340,6 +340,15 @@ a.mybutton:active {
 }
 
 /* --Case Study Page Items--------------------------------------------------- */
+/* -- Select Box Items ------------------- */
+.tags-select {
+    font-family: 'Titillium Web', sans-serif;
+}
+.tags-select .btn {
+    margin-top: 20px;
+}
+
+/* -- Tile Items ------------------------- */
 .tile a {
     height: 500px;
     margin: 10px;
@@ -368,14 +377,9 @@ a.mybutton:active {
 .tile a h2 {
     font-size: 20px;
 }
-.tags-select {
-    font-family: 'Titillium Web', sans-serif;
+.tile a img {
+    border-radius: 100%;
 }
-.tags-select .btn {
-    margin-top: 20px;
-}
-
-
 
 /* --Case Study Single Items------------------------------------------------- */
 .case-study-single {
@@ -383,23 +387,26 @@ a.mybutton:active {
     margin-bottom: 100px;
     border-radius: 7px;
 }
-.case-study-single h1 {
+.case-study-single .casestudy_title h1 {
     color: #9ad3de;
     font-family: 'Titillium Web', sans-serif;
     margin-top: 50px;
     margin-bottom: 50px;
 }
 .case-study-single h3 {
-    margin-top: 40px;
     color: #9ad3de;
     font-family: 'Titillium Web', sans-serif;
 }
-.case-study-single .bullet_points {
-    background-color: #9ad3de;
-    padding: 10px;
+.case-study-single .casestudy_image img {
+    max-height: 300px;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 100%;
 }
-.case-study-single .bullet_points ul {
-    padding-left: 30px;
+.case-study-single .border {
+    border: 2px solid #9ad3de;
+    border-radius: 10px;
 }
 
 /* --Footer Items------------------------------------------------------------ */
