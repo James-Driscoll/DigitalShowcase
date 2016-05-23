@@ -9,7 +9,7 @@
 <div class="row">
 	<div class="col-md-12 header">
 		<div class="container">
-			<div class="col-md-6"
+			<div class="col-xs-6"
 				<!-- Site Heading -->
 				<?php $site_heading = get_bloginfo('name');
 				$site_sub_heading = get_bloginfo('description'); ?>
@@ -19,7 +19,7 @@
 				</div>
 				<!-- / Site Heading -->
 			</div>
-			<div class="col-md-6">
+			<div class="col-xs-6">
 				<!-- Navigation -->
 				<div class="navWrapper">
 				  <?php wp_nav_menu (array('theme_location' => 'page_navigation','container_class' => 'nav')); ?>

@@ -130,6 +130,7 @@ body {
 .header {
     background-color: rgba(0, 0, 0, 0.6);
     height: 120px;
+    width: 100%;
     z-index: 100;
     position: fixed;
 }
@@ -200,6 +201,7 @@ body {
     font-weight: bold;
     color: #9ad3de;
 }
+
 
 /* -- Front-Page Items ------------------------------------------------------ */
 /* -- Carousel Items -------------------- */
@@ -302,7 +304,6 @@ a.mybutton:focus,
 a.mybutton:active {
     background-color: #89bdd3;
 }
-
 .buttons {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -356,7 +357,7 @@ a.mybutton:active {
     color: #3b3a36;
     display: block;
     font-family: 'Titillium Web', sans-serif;
-    border: 1px solid #f9f9f9;
+    border: 1px solid #fff;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
@@ -382,11 +383,6 @@ a.mybutton:active {
 }
 
 /* --Case Study Single Items------------------------------------------------- */
-.case-study-single {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    border-radius: 7px;
-}
 .case-study-single .casestudy_title h1 {
     color: #9ad3de;
     font-family: 'Titillium Web', sans-serif;
@@ -395,6 +391,14 @@ a.mybutton:active {
 }
 .case-study-single h3 {
     color: #9ad3de;
+    font-family: 'Titillium Web', sans-serif;
+}
+.case-study-single,
+.case-study-single div,
+.case-study-single div div,
+.case-study-single p,
+.case-study-single ul li,
+.case-study-single a {
     font-family: 'Titillium Web', sans-serif;
 }
 .case-study-single .casestudy_image img {
@@ -407,6 +411,12 @@ a.mybutton:active {
 .case-study-single .border {
     border: 2px solid #9ad3de;
     border-radius: 10px;
+}
+.case-study-single .nav-back a i {
+    padding-right: 10px;
+}
+.case-study-single .casestudy_reference {
+    margin-top: 30px;
 }
 
 /* --Footer Items------------------------------------------------------------ */

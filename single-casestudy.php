@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * This is the template for displaying a single Studio custom post type.
+ * This is the template for displaying a single Studio custom post type not done by James Driscoll.
  *
  * @package WordPress
  * @subpackage DigitalShowcase
@@ -15,6 +15,7 @@ $casestudy_challenge = get_field('casestudy_challenge', false, false);
 $casestudy_result = get_field('casestudy_result', false, false);
 $casestudy_solution = get_field('casestudy_solution', false, false);
 $casestudy_achievement = get_field('casestudy_achievement', false, false);
+$casestudy_reference = get_field('casestudy_reference', false, false);
 
 get_template_parts( array( 'head') );
 get_template_parts( array( 'nav') ); ?>
@@ -22,7 +23,12 @@ get_template_parts( array( 'nav') ); ?>
 <div class="row">
 	<div class="container">
 		<div class="case-study-single content">
-		    <?php if (have_posts()) while (have_posts()) : the_post(); ?>
+			<div class="row">
+				<div class="nav-back">
+					<a href="http://staging.digitalshowcase.marketing/case-studies"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>Back to Case Studies</a>
+				</div>
+			</div>
+			<?php if (have_posts()) while (have_posts()) : the_post(); ?>
 				<div class="row">
 					<div class="casestudy_title">
 						<h1 class="text-center"><?php echo $casestudy_title; ?></h1>
@@ -60,7 +66,12 @@ get_template_parts( array( 'nav') ); ?>
 						<p><?php echo $casestudy_achievement; ?></p>
 					</div>
 				</div>
-			<?php endwhile; ?>
+				<div class="row">
+					<div class="casestudy_reference">
+						<p><strong>Reference: </strong><?php echo $casestudy_reference; ?></p>
+					</div>
+				</div>
+				<?php endwhile; ?>
 		</div>
 	</div>
 </div>
