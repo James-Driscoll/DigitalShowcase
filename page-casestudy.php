@@ -17,12 +17,12 @@ get_template_parts( array( 'nav') ); ?>
 	<div class="content page-casestudies container">
 
 		<!-- Heading -->
-		<?php $casestudies_heading = get_field('casestudies_heading', false, false);
-	    $casestudies_sub_heading = get_field('casestudies_sub_heading', false, false); ?>
+		<?php $page_heading = get_field('page_heading', false, false);
+	    $page_sub_heading = get_field('page_sub_heading', false, false); ?>
 	    <div class="row">
-            <div class="page-heading">
-                <h2><?php echo $casestudies_heading; ?></h2>
-                <p><?php echo $casestudies_sub_heading; ?></p>
+            <div class="page-heading font1">
+                <h2><?php echo $page_heading; ?></h2>
+                <p><?php echo $page_sub_heading; ?></p>
             </div>
 	    </div>
 		<!-- / Heading -->
