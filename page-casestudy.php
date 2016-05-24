@@ -17,8 +17,8 @@ get_template_parts( array( 'nav') ); ?>
 	<div class="content page-casestudies container">
 
 		<!-- Heading -->
-		<?php $page_heading = get_field('page_heading', false, false);
-	    $page_sub_heading = get_field('page_sub_heading', false, false); ?>
+		<?php $page_heading = get_field('page_heading');
+	    $page_sub_heading = get_field('page_sub_heading'); ?>
 	    <div class="row">
             <div class="page-heading font1">
                 <h2><?php echo $page_heading; ?></h2>
@@ -64,9 +64,9 @@ get_template_parts( array( 'nav') ); ?>
 			<!-- The Loop -->
 			<?php $query = new WP_Query( $args );
 			if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
-				$casestudy_title = get_field('casestudy_title', false, false);
-				$casestudy_summary = get_field('casestudy_summary', false, false);
-				$casestudy_tags = get_field('casestudy_tags', false, false);
+				$casestudy_title = get_field('casestudy_title');
+				$casestudy_summary = get_field('casestudy_summary');
+				$casestudy_tags = get_field('casestudy_tags');
 				$casestudy_image = get_field('casestudy_image') ?>
 				<div class="tile font1 col-md-4">
 					<a href="<?php the_permalink() ?>">

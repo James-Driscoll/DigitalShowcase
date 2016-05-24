@@ -8,14 +8,14 @@
  *
  */
 
-$casestudy_title = get_field('casestudy_title', false, false);
-$casestudy_description = get_field('casestudy_description', false, false);
+$casestudy_title = get_field('casestudy_title');
+$casestudy_description = get_field('casestudy_description');
 $casestudy_image = get_field('casestudy_image');
-$casestudy_challenge = get_field('casestudy_challenge', false, false);
-$casestudy_result = get_field('casestudy_result', false, false);
-$casestudy_solution = get_field('casestudy_solution', false, false);
-$casestudy_achievement = get_field('casestudy_achievement', false, false);
-$casestudy_reference = get_field('casestudy_reference', false, false);
+$casestudy_challenge = get_field('casestudy_challenge');
+$casestudy_result = get_field('casestudy_result');
+$casestudy_solution = get_field('casestudy_solution');
+$casestudy_achievement = get_field('casestudy_achievement');
+$casestudy_reference = get_field('casestudy_reference');
 
 get_template_parts( array( 'head') );
 get_template_parts( array( 'nav') ); ?>

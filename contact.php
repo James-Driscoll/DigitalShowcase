@@ -15,8 +15,8 @@ get_template_parts( array( 'nav') ); ?>
 <!-- The Loop -->
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-    <?php $page_heading = get_field('page_heading', false, false);
-    $page_sub_heading = get_field('page_sub_heading', false, false); ?>
+    <?php $page_heading = get_field('page_heading');
+    $page_sub_heading = get_field('page_sub_heading'); ?>
 
     <div class="row">
         <div class="container">
