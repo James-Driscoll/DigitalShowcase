@@ -36,6 +36,18 @@ get_template_parts( array( 'nav') ); ?>
 					</div>
 				</div>
 				<div class="row">
+					<div class="casestudy_tags font1">
+						<ul>
+						<?php $posttags = get_the_tags();
+							if ($posttags) {
+								foreach($posttags as $tag) {
+									echo '<li>' . $tag->name . '</li>';
+								}
+							} ?>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
 					<div class="casestudy_description font1 text-center">
 						<p><?php echo $casestudy_description; ?></p>
 					</div>

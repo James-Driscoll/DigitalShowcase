@@ -336,6 +336,10 @@ a.mybutton:active {
 .tags-select .btn {
     margin-top: 20px;
 }
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #9ad3de;
+    color: #fff;
+}
 
 /* -- Tile Items ------------------------- */
 .tile a {
@@ -372,9 +376,21 @@ a.mybutton:active {
 /* --Case Study Single Items------------------------------------------------- */
 .case-study-single .casestudy_title h1 {
     color: #9ad3de;
-
     margin-top: 50px;
     margin-bottom: 50px;
+}
+.case-study-single .casestudy_tags ul {
+    list-style: none;
+    padding: 0px;
+    margin-bottom: 30px;
+}
+.case-study-single .casestudy_tags ul li {
+    display: inline;
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #9ad3de;
+    color: #fff;
+    border-radius: 10px;
 }
 .case-study-single h3 {
     color: #9ad3de;

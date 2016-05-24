@@ -44,6 +44,7 @@ get_template_parts( array( 'nav') ); ?>
 			$tags = $_GET["tags"];
 		} else {
 			$tags = 'highlight';
+			// If no tags have been defined then pull the 'highlight' posts.
 		}
 
 		$args = array(
