@@ -125,6 +125,9 @@ body {
     margin-right: 0px;
     margin-left: 0px;
 }
+.font1 {
+    font-family: 'Titillium Web', sans-serif;
+}
 
 /* -- Header Items ---------------------------------------------------------- */
 .header {
@@ -136,20 +139,18 @@ body {
 }
 
 /* -- Title Items ----------------------- */
-.title {
+.site-title {
     color: #f9f9f9;
-    font-family: 'Titillium Web', sans-serif;
 }
-.title h1 {
+.site-title h1 {
     font-size: 30px;
     font-weight: 800;
     text-transform: uppercase;
     font-family: 'Raleway', 'Titillium Web', sans-serif;
 }
-.title h2 {
+.site-title h2 {
     font-size: 14px;
     font-weight: normal;
-    font-family: 'Titillium Web', sans-serif;
 }
 
 /* -- Navigation Items ------------------ */
@@ -169,7 +170,6 @@ body {
 }
  .navWrapper .nav a {
     text-decoration: none;
-    font-family: 'Titillium Web', sans-serif;
     font-weight: normal;
     font-size: 14px;
     -moz-transition: all .1s ease-in;
@@ -221,7 +221,6 @@ body {
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.6);
     margin-top: 120px;
-    font-family: 'Titillium Web', sans-serif;
 }
 .overlay h3 {
     color: #9ad3de;
@@ -307,20 +306,17 @@ a.mybutton:active {
 .buttons {
     margin-top: 50px;
     margin-bottom: 50px;
-    font-family: 'Titillium Web', sans-serif;
 }
 
 .page-heading h2,
-.page-heaing p {
+.page-heading p {
     color: #3b3a36;
-    font-family: 'Titillium Web', sans-serif;
 }
 
 /* -- Facets Items ----------------------- */
 .page-home {
     margin-top: 100px;
     margin-bottom: 100px;
-    font-family: 'Titillium Web', sans-serif;
 }
 .page-home .item-top {
     margin-bottom: 100px;
@@ -330,14 +326,6 @@ a.mybutton:active {
     font-size: 70px;
     display:block;
     color: #9ad3de;
-}
-.page-home .strap-line {
-    margin-bottom: 100px;
-    font-family: 'Titillium Web', sans-serif;
-}
-.page-home .strap-line h2 {
-    font-size: 40px;
-    font-family: 'Droid Serif', serif;
 }
 
 /* --Case Study Page Items--------------------------------------------------- */
@@ -356,7 +344,6 @@ a.mybutton:active {
     padding: 10px;
     color: #3b3a36;
     display: block;
-    font-family: 'Titillium Web', sans-serif;
     border: 1px solid #fff;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
@@ -385,21 +372,12 @@ a.mybutton:active {
 /* --Case Study Single Items------------------------------------------------- */
 .case-study-single .casestudy_title h1 {
     color: #9ad3de;
-    font-family: 'Titillium Web', sans-serif;
+
     margin-top: 50px;
     margin-bottom: 50px;
 }
 .case-study-single h3 {
     color: #9ad3de;
-    font-family: 'Titillium Web', sans-serif;
-}
-.case-study-single,
-.case-study-single div,
-.case-study-single div div,
-.case-study-single p,
-.case-study-single ul li,
-.case-study-single a {
-    font-family: 'Titillium Web', sans-serif;
 }
 .case-study-single .casestudy_image img {
     max-height: 300px;

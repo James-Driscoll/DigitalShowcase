@@ -49,7 +49,7 @@
             <div class="carousel-caption">
                 <!-- Optional Overlay -->
                 <div class="row">
-                    <div class="col-md-7 col-md-offset-5 overlay">
+                    <div class="col-md-7 col-md-offset-5 overlay font1">
                         <h3 class="text-left"><?php echo $carousel_slide1_title; ?></h3>
                         <P class="text-left"><?php echo $carousel_slide1_description; ?></p>
                         <a href="<?php echo $carousel_slide1_link; ?>" class="text-right">Read More<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
@@ -153,7 +153,7 @@ $button_2_text = get_field('button_2_text');
 $button_2_link = get_field('button_2_link'); ?>
 <div class="row">
     <div class="container">
-        <div class="text-center buttons">
+        <div class="text-center buttons font1">
             <a href="<?php echo $button_1_link ?>" class="mybutton"><?php echo $button_1_text ?></a>
             <a href="<?php echo $button_2_link ?>" class="mybutton"><?php echo $button_2_text ?></a>
         </div>

@@ -28,50 +28,54 @@ get_template_parts( array( 'nav') ); ?>
 					<a href="http://staging.digitalshowcase.marketing/case-studies"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>Back to Case Studies</a>
 				</div>
 			</div>
-			<?php if (have_posts()) while (have_posts()) : the_post(); ?>
+			<!-- The Loop -->
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<div class="row">
-					<div class="casestudy_title">
+					<div class="casestudy_title font1">
 						<h1 class="text-center"><?php echo $casestudy_title; ?></h1>
 					</div>
 				</div>
 				<div class="row">
-					<div class="casestudy_description text-center">
+					<div class="casestudy_description font1 text-center">
 						<p><?php echo $casestudy_description; ?></p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="casestudy_image text-center">
+					<div class="casestudy_image font1 text-center">
 						<img src="<?php echo $casestudy_image; ?>" class="img-responsive">
 					</div>
 				</div>
 				<div class="border row">
-					<div class="casestudy_challenge col-md-6">
+					<div class="casestudy_challenge font1 col-md-6">
 						<h3>Challenge</h3>
 						<p><?php echo $casestudy_challenge; ?></p>
 					</div>
-					<div class="casestudy_result col-md-6">
+					<div class="casestudy_result font1 col-md-6">
 						<h3>Result</h3>
 						<p><?php echo $casestudy_result; ?></p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="casestudy_solution">
+					<div class="casestudy_solution font1">
 						<h3>Solution</h3>
 						<p><?php echo $casestudy_solution; ?></p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="casestudy_achievement">
+					<div class="casestudy_achievement font1">
 						<h3>Achievement</h3>
 						<p><?php echo $casestudy_achievement; ?></p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="casestudy_reference">
+					<div class="casestudy_reference font1">
 						<p><strong>Reference: </strong><?php echo $casestudy_reference; ?></p>
 					</div>
 				</div>
-				<?php endwhile; ?>
+			<?php endwhile; else : ?>
+				<p>Oops! The post could not be found.</p>
+			<?php endif; ?>
+			<!-- / The Loop -->
 		</div>
 	</div>
 </div>

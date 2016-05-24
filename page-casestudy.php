@@ -40,76 +40,50 @@ get_template_parts( array( 'nav') ); ?>
 		<!-- / Search Form -->
 
 		<!-- Returned Case Study Tiles -->
-		<?php
-		if ( isset($_GET["tags"]) ) {
-			$myterms = $_GET["tags"];
-			$args = array(
-				'post_type' => 'casestudy',
-				'tax_query' => array(
-					'relation' => 'AND',
-					array(
-						'taxonomy' => 'post_tag',
-						'field'    => 'slug',
-						'terms'    => $myterms,
-						'operator' => 'AND',
-					),
+		<?php if ( isset($_GET["tags"]) ) {
+			$tags = $_GET["tags"];
+		} else {
+			$tags = 'highlight';
+		}
+
+		$args = array(
+			'post_type' => 'casestudy',
+			'tax_query' => array(
+				'relation' => 'AND',
+				array(
+					'taxonomy' => 'post_tag',
+					'field'    => 'slug',
+					'terms'    => $tags,
+					'operator' => 'AND',
 				),
-			);
+			),
+		); ?>
 
-			$query = new WP_Query( $args ); ?>
-			<div class="row">
-				<?php while ( $query->have_posts() ) : $query->the_post();
-					$casestudy_title = get_field('casestudy_title', false, false);
-					$casestudy_summary = get_field('casestudy_summary', false, false);
-					$casestudy_tags = get_field('casestudy_tags', false, false);
-					$casestudy_image = get_field('casestudy_image') ?>
-					<div class="tile col-md-4">
-						<a href="<?php the_permalink() ?>">
-							<img src="<?php echo $casestudy_image; ?>" class="img-responsive"/>
-							<h2><?php echo $casestudy_title; ?></h2>
-							<p><?php echo $casestudy_summary; ?></p>
-							<p><?php echo $casestudy_tags; ?></p>
-							<?php  wp_reset_postdata(); ?>
-						</a>
-					</div>
-				<?php endwhile; ?>
-			</div>
-		<?php } else {
-
-			$args = array(
-				'post_type' => 'casestudy',
-				'tax_query' => array(
-					'relation' => 'AND',
-					array(
-						'taxonomy' => 'post_tag',
-						'field'    => 'slug',
-						'terms'    => 'highlight',
-						'operator' => 'AND',
-					),
-				),
-			);
-
-			$query = new WP_Query( $args ); ?>
-			<div class="row">
-				<?php while ( $query->have_posts() ) : $query->the_post();
-					$casestudy_title = get_field('casestudy_title', false, false);
-					$casestudy_summary = get_field('casestudy_summary', false, false);
-					$casestudy_tags = get_field('casestudy_tags', false, false);
-					$casestudy_image = get_field('casestudy_image') ?>
-					<div class="tile col-md-4">
-						<a href="<?php the_permalink() ?>">
-							<img src="<?php echo $casestudy_image; ?>" class="img-responsive"/>
-							<h2><?php echo $casestudy_title; ?></h2>
-							<p><?php echo $casestudy_summary; ?></p>
-							<p><?php echo $casestudy_tags; ?></p>
-							<?php  wp_reset_postdata(); ?>
-						</a>
-					</div>
-				<?php endwhile; ?>
-			</div>
-		<?php } ?>
+		<div class="row">
+			<!-- The Loop -->
+			<?php $query = new WP_Query( $args );
+			if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
+				$casestudy_title = get_field('casestudy_title', false, false);
+				$casestudy_summary = get_field('casestudy_summary', false, false);
+				$casestudy_tags = get_field('casestudy_tags', false, false);
+				$casestudy_image = get_field('casestudy_image') ?>
+				<div class="tile font1 col-md-4">
+					<a href="<?php the_permalink() ?>">
+						<img src="<?php echo $casestudy_image; ?>" class="img-responsive"/>
+						<h2><?php echo $casestudy_title; ?></h2>
+						<p><?php echo $casestudy_summary; ?></p>
+						<p><?php echo $casestudy_tags; ?></p>
+					</a>
+				</div>
+			<?php endwhile;
+			wp_reset_postdata();
+		    else : ?>
+				<?php $casestudy_noposts_text = get_field('noposts_text') ?>
+		    	<p class="font1 text-center"><?php echo $casestudy_noposts_text; ?></p>
+		    <?php endif; ?>
+			<!-- / The Loop -->
+		</div>
 		<!-- / Returned Case Study Tiles -->
-
 	</div>
 </div>
 <?php endwhile; endif; ?>

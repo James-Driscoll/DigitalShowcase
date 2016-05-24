@@ -10,26 +10,27 @@
  */
 
 get_template_parts( array( 'head') );
-get_template_parts( array( 'nav') );
+get_template_parts( array( 'nav') ); ?>
 
-if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+<!-- The Loop -->
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-    <?php $contact_heading = get_field('contact_heading', false, false);
-    $contact_sub_heading = get_field('contact_sub_heading', false, false); ?>
+    <?php $page_heading = get_field('page_heading', false, false);
+    $page_sub_heading = get_field('page_sub_heading', false, false); ?>
 
     <div class="row">
         <div class="container">
-            <div class="content page-contact page-heading">
-                <h2><?php echo $contact_heading; ?></h2>
-                <p><?php echo $contact_sub_heading; ?></p>
+            <div class="content page-contact page-heading font1">
+                <h2><?php echo $page_heading; ?></h2>
+                <p><?php echo $page_sub_heading; ?></p>
                 <div><?php the_content(); ?></div>
             </div>
         </div>
     </div>
 
-<?php endwhile;
+<?php endwhile; else : ?>
+    <p>Oops! There was a problem.</p>
+<?php endif; ?>
+<!-- / The Loop -->
 
-get_template_parts( array( 'footer') ); ?>
-
-<script type="text/javascript" src="form-scripts.js"></script>
-<script type="text/javascript" src="validator.min.js"></script>
+<?php get_template_parts( array( 'footer') ); ?>
