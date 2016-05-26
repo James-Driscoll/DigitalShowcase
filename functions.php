@@ -119,10 +119,142 @@ function register_casestudy() {
       'hierarchical' => false,
       /* the next one is important, it tells what's enabled in the post editor */
       'supports' => array( 'title', 'editor', 'thumbnail'),
-      'taxonomies' => array('post_tag')
+      'taxonomies' => array('category')
     ) /* end of options */
   ); /* end of register post type */
 }
+
+/* -------------------------------------------------------
+    Register Custom Taxonomies
+------------------------------------------------------- */
+// Industry
+add_action( 'init', 'create_industry_nonhierarchical_taxonomy', 0 );
+function create_industry_nonhierarchical_taxonomy() {
+    $labels = array(
+        'name' => _x( 'Industry', 'taxonomy general name' ),
+        'singular_name' => _x( 'Industries', 'taxonomy singular name' ),
+        'search_items' =>  __( 'Search Industries' ),
+        'popular_items' => __( 'Popular Industries' ),
+        'all_items' => __( 'All Industries' ),
+        'parent_item' => null,
+        'parent_item_colon' => null,
+        'edit_item' => __( 'Edit Industry' ),
+        'update_item' => __( 'Update Industry' ),
+        'add_new_item' => __( 'Add New Industry' ),
+        'new_item_name' => __( 'New Industry Name' ),
+        'separate_items_with_commas' => __( 'Separate Industries with commas' ),
+        'add_or_remove_items' => __( 'Add or remove Industries' ),
+        'choose_from_most_used' => __( 'Choose from the most used topics' ),
+        'menu_name' => __( 'Industries' ),
+    );
+    register_taxonomy('industry','casestudy',array(
+        'hierarchical' => false,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'update_count_callback' => '_update_post_term_count',
+        'query_var' => true,
+        'rewrite' => array( 'slug' => 'industry' ),
+    ));
+}
+
+
+// Technology
+add_action( 'init', 'create_technology_nonhierarchical_taxonomy', 0 );
+function create_technology_nonhierarchical_taxonomy() {
+    $labels = array(
+        'name' => _x( 'Technology', 'taxonomy general name' ),
+        'singular_name' => _x( 'Technologies', 'taxonomy singular name' ),
+        'search_items' =>  __( 'Search Technologies' ),
+        'popular_items' => __( 'Popular Technologies' ),
+        'all_items' => __( 'All Technologies' ),
+        'parent_item' => null,
+        'parent_item_colon' => null,
+        'edit_item' => __( 'Edit Technology' ),
+        'update_item' => __( 'Update Technology' ),
+        'add_new_item' => __( 'Add New Technology' ),
+        'new_item_name' => __( 'New Technology Name' ),
+        'separate_items_with_commas' => __( 'Separate Technologies with commas' ),
+        'add_or_remove_items' => __( 'Add or remove Technologies' ),
+        'choose_from_most_used' => __( 'Choose from the most used Technologies' ),
+        'menu_name' => __( 'Technologies' ),
+    );
+    register_taxonomy('technology','casestudy',array(
+        'hierarchical' => false,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'update_count_callback' => '_update_post_term_count',
+        'query_var' => true,
+        'rewrite' => array( 'slug' => 'technology' ),
+    ));
+}
+// Programme
+add_action( 'init', 'create_programme_nonhierarchical_taxonomy', 0 );
+function create_programme_nonhierarchical_taxonomy() {
+    $labels = array(
+        'name' => _x( 'Programme', 'taxonomy general name' ),
+        'singular_name' => _x( 'Programmes', 'taxonomy singular name' ),
+        'search_items' =>  __( 'Search Programmes' ),
+        'popular_items' => __( 'Popular Programmes' ),
+        'all_items' => __( 'All Programmes' ),
+        'parent_item' => null,
+        'parent_item_colon' => null,
+        'edit_item' => __( 'Edit Programme' ),
+        'update_item' => __( 'Update Programme' ),
+        'add_new_item' => __( 'Add New Programme' ),
+        'new_item_name' => __( 'New Programme Name' ),
+        'separate_items_with_commas' => __( 'Separate Programmes with commas' ),
+        'add_or_remove_items' => __( 'Add or remove Programmes' ),
+        'choose_from_most_used' => __( 'Choose from the most used Programmes' ),
+        'menu_name' => __( 'Programmes' ),
+    );
+    register_taxonomy('programme','casestudy',array(
+        'hierarchical' => false,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'update_count_callback' => '_update_post_term_count',
+        'query_var' => true,
+        'rewrite' => array( 'slug' => 'programme' ),
+    ));
+}
+// Partner
+add_action( 'init', 'create_partner_nonhierarchical_taxonomy', 0 );
+function create_partner_nonhierarchical_taxonomy() {
+    $labels = array(
+        'name' => _x( 'Partner', 'taxonomy general name' ),
+        'singular_name' => _x( 'Partners', 'taxonomy singular name' ),
+        'search_items' =>  __( 'Search Partners' ),
+        'popular_items' => __( 'Popular Partners' ),
+        'all_items' => __( 'All Partners' ),
+        'parent_item' => null,
+        'parent_item_colon' => null,
+        'edit_item' => __( 'Edit Partner' ),
+        'update_item' => __( 'Update Partner' ),
+        'add_new_item' => __( 'Add New Partner' ),
+        'new_item_name' => __( 'New Partner Name' ),
+        'separate_items_with_commas' => __( 'Separate Partners with commas' ),
+        'add_or_remove_items' => __( 'Add or remove Partners' ),
+        'choose_from_most_used' => __( 'Choose from the most used topics' ),
+        'menu_name' => __( 'Partners' ),
+    );
+    register_taxonomy('partner','casestudy',array(
+        'hierarchical' => false,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'update_count_callback' => '_update_post_term_count',
+        'query_var' => true,
+        'rewrite' => array( 'slug' => 'partner' ),
+    ));
+}
+
+// JD : Show 'No Posts' message.
+function jd_show_noposts_message( $casestudy_noposts_text ) {
+    echo '<p class="font1 text-center">' . $casestudy_noposts_text . '</p>';
+}
+
 
 function print_bs_customtaxonomies( $taxonomy ) {
     //$terms = get_terms($taxonomy);
@@ -148,7 +280,50 @@ function jd_get_tags() {
 		}
 	}
 }
-
+function jd_get_industry_tags() {
+    $terms = get_terms( array(
+        'taxonomy' => 'industry',
+        'hide_empty' => false,
+    ) );
+	if ( $terms ) {
+		foreach ( $terms as $term ) {
+			printf( '<option value="%s">%s</option>', esc_attr( $term->slug ), esc_html( $term->name ) );
+		}
+	}
+}
+function jd_get_technology_tags() {
+    $terms = get_terms( array(
+        'taxonomy' => 'technology',
+        'hide_empty' => false,
+    ) );
+	if ( $terms ) {
+		foreach ( $terms as $term ) {
+			printf( '<option value="%s">%s</option>', esc_attr( $term->slug ), esc_html( $term->name ) );
+		}
+	}
+}
+function jd_get_programme_tags() {
+    $terms = get_terms( array(
+        'taxonomy' => 'programme',
+        'hide_empty' => false,
+    ) );
+	if ( $terms ) {
+		foreach ( $terms as $term ) {
+			printf( '<option value="%s">%s</option>', esc_attr( $term->slug ), esc_html( $term->name ) );
+		}
+	}
+}
+function jd_get_partner_tags() {
+    $terms = get_terms( array(
+        'taxonomy' => 'partner',
+        'hide_empty' => false,
+    ) );
+	if ( $terms ) {
+		foreach ( $terms as $term ) {
+			printf( '<option value="%s">%s</option>', esc_attr( $term->slug ), esc_html( $term->name ) );
+		}
+	}
+}
 
 function fjarrett_custom_taxonomy_dropdown_two( $taxonomy, $orderby = 'date', $order = 'DESC', $limit = '-1', $name, $show_option_all = null, $show_option_none = null ) {
 	$args = array(

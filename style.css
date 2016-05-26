@@ -333,6 +333,9 @@ a.mybutton:active {
 .tags-select {
     font-family: 'Titillium Web', sans-serif;
 }
+.tags-select select {
+    kwi
+}
 .tags-select .btn {
     margin-top: 20px;
 }
