@@ -187,7 +187,7 @@ body {
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
     color: #89bdd3;
-    border-bottom: 2px solid #89bdd3;
+    border-bottom: 1px solid #89bdd3;
 }
  .navWrapper .nav ul .current-page-ancestor:hover a,
  .navWrapper .nav ul .current-page-ancestor a,
@@ -200,6 +200,7 @@ body {
  .navWrapper .nav ul .current-menu-item a {
     font-weight: bold;
     color: #9ad3de;
+    border-bottom: 1px solid #89bdd3;
 }
 
 
@@ -346,7 +347,7 @@ a.mybutton:active {
 
 /* -- Tile Items ------------------------- */
 .tile a {
-    height: 500px;
+    height: 430px;
     margin: 10px;
     padding: 10px;
     color: #3b3a36;
@@ -371,9 +372,6 @@ a.mybutton:active {
 }
 .tile a h2 {
     font-size: 20px;
-}
-.tile a img {
-    border-radius: 100%;
 }
 
 /* --Case Study Single Items------------------------------------------------- */
@@ -403,7 +401,6 @@ a.mybutton:active {
     margin-bottom: 30px;
     margin-right: auto;
     margin-left: auto;
-    border-radius: 100%;
 }
 .case-study-single .border {
     border: 2px solid #9ad3de;

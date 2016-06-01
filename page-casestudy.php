@@ -29,12 +29,47 @@ get_template_parts( array( 'nav') ); ?>
 	    </div>
 		<!-- / Heading -->
 
+
+		<?php
+		// Empty Form or Page Just Loaded
+		if ( isset($_GET["industry"]) ||
+		     isset($_GET["technology"]) ||
+			 isset($_GET["programme"]) ||
+			 isset($_GET["partner"])
+			) {
+				// Some parameters set
+				$parameters_set = true;
+			} else {
+				// No parameters set
+				$parameters_set = false;
+			};
+		// / Empty Form or Page Just Loaded
+
+		// Build tags arrays.
+		if ( $parameters_set == true ) {
+			if ( isset($_GET["industry"]) ) {
+				$industry = $_GET["industry"];
+			}
+			if ( isset($_GET["technology"]) ) {
+				$technology = $_GET["technology"];
+			}
+			if ( isset($_GET["programme"]) ) {
+				$programme = $_GET["programme"];
+			}
+			if ( isset($_GET["partner"]) ) {
+				$partner = $_GET["partner"];
+			}
+		}
+		// / Build tags arrays.
+		?>
+
 		<!-- Search Form -->
 		<div class="row">
 			<form id="tags-select" class="tags-select" action="<?php the_permalink(); ?>" method="get">
 				<div class="row">
 					<div class="col-md-3">
 						<select class="tags-industry form-control select2-select" multiple="multiple" name="industry[]">
+							<option id="e6" class="" value="ANY">ANY</option>
 							<?php jd_get_industry_tags(); ?>
 						</select>
 					</div>
@@ -62,23 +97,8 @@ get_template_parts( array( 'nav') ); ?>
 		</div>
 		<!-- / Search Form -->
 
-		<!-- Empty Form or Page Just Loaded -->
-		<?php if ( isset($_GET["industry"]) ||
-		 		   isset($_GET["technology"]) ||
-				   isset($_GET["programme"]) ||
-				   isset($_GET["partner"])
-				 ) {
-					 // No Parameters
-					 $parameters_set = true;
-				 } else {
-					 // Parameters Present
-					 $parameters_set = false;
-				 };
-
-		 if ( $parameters_set == true ) { ?>
-
-			 <!-- Returned Case Study Tiles -->
-	 		<?php
+		<?php
+		if ( $parameters_set == true ) {
 			if ( isset($_GET["industry"]) ) {
 	 			$industry = $_GET["industry"];
 	 		}
@@ -121,36 +141,64 @@ get_template_parts( array( 'nav') ); ?>
 							'operator' => 'IN',
 						),
 	 			),
-	 		); ?>
+	 		);
+			} else {
+				$args = array(
+				   'post_type' => 'casestudy',
+				   'tax_query' => array(
+					   'relation' => 'AND',
+						   array(
+							   'taxonomy' => 'category',
+							   'field'    => 'slug',
+							   'terms'    => 'highlight',
+						   ),
+				   ),
+			   );
+		   } ?>
 
-	 		<div class="row">
-	 			<!-- The Loop -->
-	 			<?php $query = new WP_Query( $args );
-	 			if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
-	 				$casestudy_title = get_field('casestudy_title');
-	 				$casestudy_summary = get_field('casestudy_summary');
-	 				$casestudy_tags = get_field('casestudy_tags');
-	 				$casestudy_image = get_field('casestudy_image') ?>
-	 				<div class="tile font1 col-md-4">
-	 					<a href="<?php the_permalink() ?>">
-	 						<img src="<?php echo $casestudy_image; ?>" class="img-responsive"/>
-	 						<h2><?php echo $casestudy_title; ?></h2>
-	 						<p><?php echo $casestudy_summary; ?></p>
-	 						<p><?php echo $casestudy_tags; ?></p>
-	 					</a>
-	 				</div>
-	 			<?php endwhile;
-	 			wp_reset_postdata();
-	 		    else : ?>
-	 				<?php $casestudy_noposts_text = get_field('noposts_text') ?>
-	 		    	<p class="font1 text-center"><?php echo $casestudy_noposts_text; ?></p>
-	 		    <?php endif; ?>
-	 			<!-- / The Loop -->
-	 		</div>
-	 		<!-- / Returned Case Study Tiles -->
-		 <?php } else {
-			 jd_show_noposts_message($casestudy_noposts_text);
-		 } ?>
+	    <!-- Returned Case Study Tiles -->
+		<div class="row">
+			<!-- The Loop -->
+			<?php $query = new WP_Query( $args );
+			if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
+				$casestudy_title = get_field('casestudy_title');
+				$casestudy_summary = get_field('casestudy_summary');
+				$casestudy_tags = get_field('casestudy_tags');
+				$casestudy_image = get_field('casestudy_image') ?>
+				<div class="tile font1 col-sm-6 col-md-3">
+					<a href="<?php the_permalink() ?>" class="thumbnail">
+						<img src="<?php echo $casestudy_image; ?>" class="img-responsive img-circle"/>
+						<div class="caption">
+							<h2><?php echo $casestudy_title; ?></h2>
+							<p><?php echo $casestudy_summary; ?></p>
+							<p><?php echo $casestudy_tags; ?></p>
+						</div>
+					</a>
+				</div>
+			<?php endwhile;
+			wp_reset_postdata();
+			else :
+				$casestudy_noposts_text = get_field('noposts_text');
+				jd_show_noposts_message($casestudy_noposts_text);
+			endif; ?>
+			<!-- / The Loop -->
+		</div>
+		<!-- / Returned Case Study Tiles -->
+
+		<div class="row">
+		  <div class="col-sm-6 col-md-4">
+		    <div class="thumbnail">
+		      <img src="..." alt="...">
+		      <div class="caption">
+		        <h3>Thumbnail label</h3>
+		        <p>...</p>
+		        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+
 
 	</div>
 </div>

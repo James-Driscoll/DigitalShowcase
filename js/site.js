@@ -1,24 +1,12 @@
-$(function(){
-    $(".chzn-select").chosen();
-});
-
-
-$(document).ready(function() {
-  $(".js-example-basic-single").select2();
-});
-
-
+// Enable Select2
 $('select').select2();
 
-
-function displayCurrentValue(selectedObject, currentSearchTerm) {
-  return currentSearchTerm;
-}
-
-$("#e1").select2({
-  nextSearchTerm: displayCurrentValue
+// Enable Clear Function
+$(".select2-select").select2({
+  allowClear: true,
 });
 
+// Populate placeholders
 $(".tags-industry").select2({
   placeholder: "Add an Industry tag"
 });

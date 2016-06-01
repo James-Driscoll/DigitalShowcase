@@ -255,6 +255,46 @@ function jd_show_noposts_message( $casestudy_noposts_text ) {
     echo '<p class="font1 text-center">' . $casestudy_noposts_text . '</p>';
 }
 
+// JD : Build Case Study Reference.
+function jd_build_reference( $casestudy_industries, $casestudy_programmes, $casestudy_details_molly_activity_id, $casestudy_details_effort, $casestudy_details_duration, $casestudy_details_teams ) {
+
+$reference = '';
+// Industries
+if ( $casestudy_industries ) {
+    foreach($casestudy_industries as $industry) {
+        $reference = $reference . $industry->name;
+    }
+    $reference = $reference . '_';
+}
+// Programmes
+if ( $casestudy_programmes ) {
+    foreach($casestudy_programmes as $programme ) {
+        $reference = $reference . $programme->name;
+    }
+    $reference = $reference . '_';
+}
+// Activity ID
+if ( $casestudy_details_molly_activity_id ) {
+    $reference = $reference . 'ID' . $casestudy_details_molly_activity_id . '_';
+}
+// Effort
+if ( $casestudy_details_effort ) {
+    $reference = $reference . $casestudy_details_effort . 'h_';
+}
+// Duration
+if ( $casestudy_details_duration ) {
+    $reference = $reference . $casestudy_details_duration . 'w_';
+}
+// Teams
+if ( $casestudy_details_teams ) {
+    foreach($casestudy_details_teams as $team) {
+        $reference = $reference . $team;
+    }
+    $reference = $reference;
+}
+    echo $reference;
+}
+
 
 function print_bs_customtaxonomies( $taxonomy ) {
     //$terms = get_terms($taxonomy);

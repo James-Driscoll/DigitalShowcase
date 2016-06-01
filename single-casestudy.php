@@ -16,6 +16,14 @@ $casestudy_result = get_field('casestudy_result');
 $casestudy_solution = get_field('casestudy_solution');
 $casestudy_achievement = get_field('casestudy_achievement');
 $casestudy_reference = get_field('casestudy_reference');
+$casestudy_details_molly_activity_id = get_field('details_molly_activity_id');
+$casestudy_details_effort = get_field('details_effort');
+$casestudy_details_duration = get_field('details_duration');
+$casestudy_details_teams = get_field('details_teams');
+$casestudy_industries = get_the_terms( get_the_ID(), 'industry');
+$casestudy_programmes = get_the_terms( get_the_ID(), 'programme');
+$casestudy_technologies = get_the_terms( get_the_ID(), 'technology');
+$casestudy_partners = get_the_terms( get_the_ID(), 'partner');
 
 get_template_parts( array( 'head') );
 get_template_parts( array( 'nav') ); ?>
@@ -37,14 +45,16 @@ get_template_parts( array( 'nav') ); ?>
 				</div>
 				<div class="row">
 					<div class="casestudy_tags font1">
-						<ul>
-						<?php $posttags = get_the_tags();
-							if ($posttags) {
-								foreach($posttags as $tag) {
-									echo '<li>' . $tag->name . '</li>';
-								}
-							} ?>
-						</ul>
+						<div class="row">
+							<ul>
+							<?php $posttags = get_the_terms( get_the_ID(), 'industry');
+								if ($posttags) {
+									foreach($posttags as $tag) {
+										echo '<li>' . $tag->name . '</li>';
+									}
+								} ?>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<div class="row">
@@ -54,7 +64,7 @@ get_template_parts( array( 'nav') ); ?>
 				</div>
 				<div class="row">
 					<div class="casestudy_image font1 text-center">
-						<img src="<?php echo $casestudy_image; ?>" class="img-responsive">
+						<img src="<?php echo $casestudy_image; ?>" class="img-responsive img-circle">
 					</div>
 				</div>
 				<div class="border row">
@@ -81,7 +91,7 @@ get_template_parts( array( 'nav') ); ?>
 				</div>
 				<div class="row">
 					<div class="casestudy_reference font1">
-						<p><strong>Reference: </strong><?php echo $casestudy_reference; ?></p>
+						<p><strong>Reference: </strong><?php jd_build_reference( $casestudy_industries, $casestudy_programmes, $casestudy_details_molly_activity_id, $casestudy_details_effort, $casestudy_details_duration, $casestudy_details_teams ); ?></p>
 					</div>
 				</div>
 			<?php endwhile; else : ?>
