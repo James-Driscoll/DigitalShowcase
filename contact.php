@@ -15,15 +15,22 @@ get_template_parts( array( 'nav') ); ?>
 <!-- The Loop -->
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-    <?php $page_heading = get_field('page_heading');
-    $page_sub_heading = get_field('page_sub_heading'); ?>
-
     <div class="row">
-        <div class="container">
-            <div class="content page-contact page-heading font1">
-                <h2><?php echo $page_heading; ?></h2>
-                <p><?php echo $page_sub_heading; ?></p>
-                <div><?php the_content(); ?></div>
+    	<div class="content page-casestudies container">
+
+    		<!-- Heading -->
+    		<?php $page_heading = get_field('page_heading');
+    	    $page_sub_heading = get_field('page_sub_heading'); ?>
+    	    <div class="row">
+                <div class="page-heading font1">
+                    <h1><?php echo $page_heading; ?></h2>
+                    <p><?php echo $page_sub_heading; ?></p>
+                </div>
+    	    </div>
+    		<!-- / Heading -->
+
+            <div class="row">
+                <div class="font1"><?php the_content(); ?></div>
             </div>
         </div>
     </div>

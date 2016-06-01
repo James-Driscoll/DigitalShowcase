@@ -23,7 +23,7 @@ get_template_parts( array( 'nav') ); ?>
 	    $page_sub_heading = get_field('page_sub_heading'); ?>
 	    <div class="row">
             <div class="page-heading font1">
-                <h2><?php echo $page_heading; ?></h2>
+                <h1><?php echo $page_heading; ?></h2>
                 <p><?php echo $page_sub_heading; ?></p>
             </div>
 	    </div>
@@ -68,22 +68,22 @@ get_template_parts( array( 'nav') ); ?>
 			<form id="tags-select" class="tags-select" action="<?php the_permalink(); ?>" method="get">
 				<div class="row">
 					<div class="col-md-3">
-						<select class="tags-industry form-control select2-select" multiple="multiple" name="industry[]">
+						<select class="myselect2-select tags-industry form-control" multiple="multiple" name="industry[]">
 							<?php jd_get_search_tags('industry'); ?>
 						</select>
 					</div>
 					<div class="col-md-3">
-						<select class="tags-technology form-control select2-select" multiple="multiple" name="technology[]">
+						<select class="tags-technology form-control myselect2-select" multiple="multiple" name="technology[]">
 							<?php jd_get_search_tags('technology'); ?>
 						</select>
 					</div>
 					<div class="col-md-3">
-						<select class="tags-programme form-control select2-select" multiple="multiple" name="programme[]">
+						<select class="tags-programme form-control myselect2-select" multiple="multiple" name="programme[]">
 							<?php jd_get_search_tags('programme'); ?>
 						</select>
 					</div>
 					<div class="col-md-3">
-						<select class="tags-partner form-control select2-select" multiple="multiple" name="partner[]">
+						<select class="tags-partner form-control myselect2-select" multiple="multiple" name="partner[]">
 							<?php jd_get_search_tags('partner'); ?>
 						</select>
 					</div>

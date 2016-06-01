@@ -1,21 +1,24 @@
 // Enable Select2
-$('select').select2();
-
-// Enable Clear Function
-$(".select2-select").select2({
-  allowClear: true,
-});
+$("myselect2-select").select2();
 
 // Populate placeholders
 $(".tags-industry").select2({
-  placeholder: "Add an Industry tag"
+    tags: "true",
+    placeholder: "Add an Industry tag",
+    allowClear: true
 });
 $(".tags-technology").select2({
-  placeholder: "Add a Technology tag"
+    tags: "true",
+    placeholder: "Add a Technology tag",
+    allowClear: true
 });
 $(".tags-programme").select2({
-  placeholder: "Add a Programme tag"
+    tags: "true",
+    placeholder: "Add a Programme tag",
+    allowClear: true
 });
 $(".tags-partner").select2({
-  placeholder: "Add a Partner tag"
+    tags: "true",
+    placeholder: "Add a Partner tag",
+    allowClear: true
 });

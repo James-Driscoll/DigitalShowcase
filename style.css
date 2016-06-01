@@ -118,7 +118,7 @@ body {
 }
 .content {
     min-height: 650px;
-    margin-top: 180px;
+    margin-top: 120px;
     margin-bottom: 60px;
 }
 .row {
@@ -127,6 +127,13 @@ body {
 }
 .font1 {
     font-family: 'Titillium Web', sans-serif;
+}
+div h1 {
+    color: #9ad3de;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 32px;
+    text-align: center;
 }
 
 /* -- Header Items ---------------------------------------------------------- */
@@ -141,12 +148,17 @@ body {
 /* -- Title Items ----------------------- */
 .site-title {
     color: #f9f9f9;
+    margin-top: 22px;
 }
 .site-title h1 {
     font-size: 30px;
     font-weight: 800;
     text-transform: uppercase;
     font-family: 'Raleway', 'Titillium Web', sans-serif;
+    color: #fff;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: left;
 }
 .site-title h2 {
     font-size: 14px;
@@ -378,10 +390,6 @@ a.mybutton:active {
 }
 
 /* --Case Study Single Items------------------------------------------------- */
-.case-study-single .casestudy_title h1 {
-    color: #9ad3de;
-    margin-top: 50px;
-    margin-bottom: 50px;
 }
 .case-study-single .casestudy_tags strong {
     display: inline-block;
