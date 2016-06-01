@@ -48,16 +48,16 @@ get_template_parts( array( 'nav') ); ?>
 		// Build tags arrays.
 		if ( $parameters_set == true ) {
 			if ( isset($_GET["industry"]) ) {
-				$industry = $_GET["industry"];
+				$industries = $_GET["industry"];
 			}
 			if ( isset($_GET["technology"]) ) {
-				$technology = $_GET["technology"];
+				$technologies = $_GET["technology"];
 			}
 			if ( isset($_GET["programme"]) ) {
-				$programme = $_GET["programme"];
+				$programmes = $_GET["programme"];
 			}
 			if ( isset($_GET["partner"]) ) {
-				$partner = $_GET["partner"];
+				$partners = $_GET["partner"];
 			}
 		}
 		// / Build tags arrays.
@@ -69,7 +69,6 @@ get_template_parts( array( 'nav') ); ?>
 				<div class="row">
 					<div class="col-md-3">
 						<select class="tags-industry form-control select2-select" multiple="multiple" name="industry[]">
-							<option id="e6" class="" value="ANY">ANY</option>
 							<?php jd_get_industry_tags(); ?>
 						</select>
 					</div>
@@ -100,16 +99,56 @@ get_template_parts( array( 'nav') ); ?>
 		<?php
 		if ( $parameters_set == true ) {
 			if ( isset($_GET["industry"]) ) {
-	 			$industry = $_GET["industry"];
-	 		}
+	 			$industries = $_GET["industry"];
+			} else {
+				$terms = get_terms( array(
+					'taxonomy' => 'industry',
+					'hide_empty' => false,
+				) );
+				$count = 0;
+				foreach ( $terms as $term ) {
+					$industries[$count] = $term->name;
+					$count = $count + 1;
+				}
+			}
 			if ( isset($_GET["technology"]) ) {
-	 			$technology = $_GET["technology"];
-	 		}
+	 			$technologies = $_GET["technology"];
+	 		} else {
+				$terms = get_terms( array(
+					'taxonomy' => 'technology',
+					'hide_empty' => false,
+				) );
+				$count = 0;
+				foreach ( $terms as $term ) {
+					$technologies[$count] = $term->name;
+					$count = $count + 1;
+				}
+			}
 			if ( isset($_GET["programme"]) ) {
-				$programme = $_GET["programme"];
+				$programmes = $_GET["programme"];
+			} else {
+				$terms = get_terms( array(
+					'taxonomy' => 'programme',
+					'hide_empty' => false,
+				) );
+				$count = 0;
+				foreach ( $terms as $term ) {
+					$programmes[$count] = $term->name;
+					$count = $count + 1;
+				}
 			}
 			if ( isset($_GET["partner"]) ) {
-				$partner = $_GET["partner"];
+				$partners = $_GET["partner"];
+			} else {
+				$terms = get_terms( array(
+					'taxonomy' => 'partner',
+					'hide_empty' => false,
+				) );
+				$count = 0;
+				foreach ( $terms as $term ) {
+					$partners[$count] = $term->name;
+					$count = $count + 1;
+				}
 			}
 
 	 		$args = array(
@@ -119,25 +158,25 @@ get_template_parts( array( 'nav') ); ?>
 		 				array(
 		 					'taxonomy' => 'industry',
 		 					'field'    => 'slug',
-		 					'terms'    => $industry,
+		 					'terms'    => $industries,
 		 					'operator' => 'IN',
 		 				),
 						array(
 		 					'taxonomy' => 'technology',
 		 					'field'    => 'slug',
-		 					'terms'    => $technology,
+		 					'terms'    => $technologies,
 		 					'operator' => 'IN',
 		 				),
 						array(
 							'taxonomy' => 'programme',
 							'field'    => 'slug',
-							'terms'    => $programme,
+							'terms'    => $programmes,
 							'operator' => 'IN',
 						),
 						array(
 							'taxonomy' => 'partner',
 							'field'    => 'slug',
-							'terms'    => $partner,
+							'terms'    => $partners,
 							'operator' => 'IN',
 						),
 	 			),

@@ -46,8 +46,42 @@ get_template_parts( array( 'nav') ); ?>
 				<div class="row">
 					<div class="casestudy_tags font1">
 						<div class="row">
+							<strong>Industry: </strong>
 							<ul>
 							<?php $posttags = get_the_terms( get_the_ID(), 'industry');
+								if ($posttags) {
+									foreach($posttags as $tag) {
+										echo '<li>' . $tag->name . '</li>';
+									}
+								} ?>
+							</ul>
+						</div>
+						<div class="row">
+							<strong>Programme: </strong>
+							<ul>
+							<?php $posttags = get_the_terms( get_the_ID(), 'programme');
+								if ($posttags) {
+									foreach($posttags as $tag) {
+										echo '<li>' . $tag->name . '</li>';
+									}
+								} ?>
+							</ul>
+						</div>
+						<div class="row">
+							<strong>Technology: </strong>
+							<ul>
+							<?php $posttags = get_the_terms( get_the_ID(), 'technology');
+								if ($posttags) {
+									foreach($posttags as $tag) {
+										echo '<li>' . $tag->name . '</li>';
+									}
+								} ?>
+							</ul>
+						</div>
+						<div class="row">
+							<strong>Partner: </strong>
+							<ul>
+							<?php $posttags = get_the_terms( get_the_ID(), 'partner');
 								if ($posttags) {
 									foreach($posttags as $tag) {
 										echo '<li>' . $tag->name . '</li>';
