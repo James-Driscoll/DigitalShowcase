@@ -69,22 +69,22 @@ get_template_parts( array( 'nav') ); ?>
 				<div class="row">
 					<div class="col-md-3">
 						<select class="tags-industry form-control select2-select" multiple="multiple" name="industry[]">
-							<?php jd_get_industry_tags(); ?>
+							<?php jd_get_search_tags('industry'); ?>
 						</select>
 					</div>
 					<div class="col-md-3">
 						<select class="tags-technology form-control select2-select" multiple="multiple" name="technology[]">
-							<?php jd_get_technology_tags(); ?>
+							<?php jd_get_search_tags('technology'); ?>
 						</select>
 					</div>
 					<div class="col-md-3">
 						<select class="tags-programme form-control select2-select" multiple="multiple" name="programme[]">
-							<?php jd_get_programme_tags(); ?>
+							<?php jd_get_search_tags('programme'); ?>
 						</select>
 					</div>
 					<div class="col-md-3">
 						<select class="tags-partner form-control select2-select" multiple="multiple" name="partner[]">
-							<?php jd_get_partner_tags(); ?>
+							<?php jd_get_search_tags('partner'); ?>
 						</select>
 					</div>
 				</div>
@@ -196,7 +196,7 @@ get_template_parts( array( 'nav') ); ?>
 		   } ?>
 
 	    <!-- Returned Case Study Tiles -->
-		<div class="row">
+		<div class="returned row">
 			<!-- The Loop -->
 			<?php $query = new WP_Query( $args );
 			if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
@@ -223,21 +223,6 @@ get_template_parts( array( 'nav') ); ?>
 			<!-- / The Loop -->
 		</div>
 		<!-- / Returned Case Study Tiles -->
-
-		<div class="row">
-		  <div class="col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="..." alt="...">
-		      <div class="caption">
-		        <h3>Thumbnail label</h3>
-		        <p>...</p>
-		        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-		      </div>
-		    </div>
-		  </div>
-		</div>
-
-
 
 	</div>
 </div>

@@ -257,105 +257,47 @@ function jd_show_noposts_message( $casestudy_noposts_text ) {
 
 // JD : Build Case Study Reference.
 function jd_build_reference( $casestudy_industries, $casestudy_programmes, $casestudy_details_molly_activity_id, $casestudy_details_effort, $casestudy_details_duration, $casestudy_details_teams ) {
-
-$reference = '';
-// Industries
-if ( $casestudy_industries ) {
-    foreach($casestudy_industries as $industry) {
-        $reference = $reference . $industry->name;
-    }
-    $reference = $reference . '_';
-}
-// Programmes
-if ( $casestudy_programmes ) {
-    foreach($casestudy_programmes as $programme ) {
-        $reference = $reference . $programme->name;
-    }
-    $reference = $reference . '_';
-}
-// Activity ID
-if ( $casestudy_details_molly_activity_id ) {
-    $reference = $reference . 'ID' . $casestudy_details_molly_activity_id . '_';
-}
-// Effort
-if ( $casestudy_details_effort ) {
-    $reference = $reference . $casestudy_details_effort . 'h_';
-}
-// Duration
-if ( $casestudy_details_duration ) {
-    $reference = $reference . $casestudy_details_duration . 'w_';
-}
-// Teams
-if ( $casestudy_details_teams ) {
-    foreach($casestudy_details_teams as $team) {
-        $reference = $reference . $team;
-    }
-    $reference = $reference;
-}
-    echo $reference;
-}
-
-
-function print_bs_customtaxonomies( $taxonomy ) {
-    //$terms = get_terms($taxonomy);
-    $terms = get_terms( array(
-    'taxonomy' => $taxonomy,
-    'hide_empty' => false,
-    ) );
-    if ( $terms ) {
-        foreach ( $terms as $term ) {
-            printf( '<li><a href="#">%s</a></li>', esc_attr( $term->name ), esc_html( $term->name ) );
+    $reference = '';
+    // Industries
+    if ( $casestudy_industries ) {
+        foreach($casestudy_industries as $industry) {
+            $reference = $reference . $industry->name;
         }
+        $reference = $reference . '_';
     }
+    // Programmes
+    if ( $casestudy_programmes ) {
+        foreach($casestudy_programmes as $programme ) {
+            $reference = $reference . $programme->name;
+        }
+        $reference = $reference . '_';
+    }
+    // Activity ID
+    if ( $casestudy_details_molly_activity_id ) {
+        $reference = $reference . 'ID' . $casestudy_details_molly_activity_id . '_';
+    }
+    // Effort
+    if ( $casestudy_details_effort ) {
+        $reference = $reference . $casestudy_details_effort . 'h_';
+    }
+    // Duration
+    if ( $casestudy_details_duration ) {
+        $reference = $reference . $casestudy_details_duration . 'w_';
+    }
+    // Teams
+    if ( $casestudy_details_teams ) {
+        foreach($casestudy_details_teams as $team) {
+            $reference = $reference . $team;
+        }
+        $reference = $reference;
+    }
+        echo $reference;
 }
-//fjarret
-function jd_get_tags() {
+
+// JD : Return tags in the form of form <option>s
+function jd_get_search_tags( $taxonomy ) {
     $terms = get_terms( array(
-        'taxonomy' => 'post_tag',
-        'hide_empty' => false,
-    ) );
-	if ( $terms ) {
-		foreach ( $terms as $term ) {
-			printf( '<option value="%s">%s</option>', esc_attr( $term->slug ), esc_html( $term->name ) );
-		}
-	}
-}
-function jd_get_industry_tags() {
-    $terms = get_terms( array(
-        'taxonomy' => 'industry',
-        'hide_empty' => false,
-    ) );
-	if ( $terms ) {
-		foreach ( $terms as $term ) {
-			printf( '<option value="%s">%s</option>', esc_attr( $term->slug ), esc_html( $term->name ) );
-		}
-	}
-}
-function jd_get_technology_tags() {
-    $terms = get_terms( array(
-        'taxonomy' => 'technology',
-        'hide_empty' => false,
-    ) );
-	if ( $terms ) {
-		foreach ( $terms as $term ) {
-			printf( '<option value="%s">%s</option>', esc_attr( $term->slug ), esc_html( $term->name ) );
-		}
-	}
-}
-function jd_get_programme_tags() {
-    $terms = get_terms( array(
-        'taxonomy' => 'programme',
-        'hide_empty' => false,
-    ) );
-	if ( $terms ) {
-		foreach ( $terms as $term ) {
-			printf( '<option value="%s">%s</option>', esc_attr( $term->slug ), esc_html( $term->name ) );
-		}
-	}
-}
-function jd_get_partner_tags() {
-    $terms = get_terms( array(
-        'taxonomy' => 'partner',
+        'taxonomy' => $taxonomy,
         'hide_empty' => false,
     ) );
 	if ( $terms ) {
@@ -365,28 +307,6 @@ function jd_get_partner_tags() {
 	}
 }
 
-function fjarrett_custom_taxonomy_dropdown_two( $taxonomy, $orderby = 'date', $order = 'DESC', $limit = '-1', $name, $show_option_all = null, $show_option_none = null ) {
-	$args = array(
-		'orderby' => $orderby,
-		'order' => $order,
-		'number' => $limit,
-	);
-	$terms = get_terms( $taxonomy, $args );
-	$name = ( $name ) ? $name : $taxonomy;
-	if ( $terms ) {
-		printf( '<select name="%s" class="postform">', esc_attr( $name ) );
-		if ( $show_option_all ) {
-			printf( '<option value="0">%s</option>', esc_html( $show_option_all ) );
-		}
-		if ( $show_option_none ) {
-			printf( '<option value="-1">%s</option>', esc_html( $show_option_none ) );
-		}
-		foreach ( $terms as $term ) {
-			printf( '<option value="%s">%s</option>', esc_attr( $term->slug ), esc_html( $term->name ) );
-		}
-		print( '</select>' );
-	}
-}
 
 /* -------------------------------------------------------
     Make the site private
