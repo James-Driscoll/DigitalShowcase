@@ -4,7 +4,7 @@ $("myselect2-select").select2();
 // Populate placeholders
 $(".tags-industry").select2({
     tags: "true",
-    placeholder: "Add an Industry tag",
+    placeholder: "Add a Vertical tag",
     allowClear: true
 });
 $(".tags-technology").select2({

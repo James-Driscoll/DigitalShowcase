@@ -29,15 +29,15 @@ get_template_parts( array( 'head') );
 get_template_parts( array( 'nav') ); ?>
 
 <div class="row">
-	<div class="container">
-		<div class="case-study-single content">
-			<div class="row">
-				<div class="nav-back">
-					<a href="http://staging.digitalshowcase.marketing/case-studies"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>Back to Case Studies</a>
-				</div>
+	<div class="content container">
+		<div class="row">
+			<div class="nav-back">
+				<a href="http://staging.digitalshowcase.marketing/case-studies"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>Back to Case Studies</a>
 			</div>
-			<!-- The Loop -->
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		</div>
+		<!-- The Loop -->
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<div class="casestudy_single">
 				<div class="row">
 					<div class="casestudy_title font1">
 						<h1 class="text-center"><?php echo $casestudy_title; ?></h1>
@@ -46,7 +46,7 @@ get_template_parts( array( 'nav') ); ?>
 				<div class="row">
 					<div class="casestudy_tags font1">
 						<div class="row">
-							<strong>Industry: </strong>
+							<strong>Verticals: </strong>
 							<ul>
 							<?php $posttags = get_the_terms( get_the_ID(), 'industry');
 								if ($posttags) {
@@ -57,7 +57,7 @@ get_template_parts( array( 'nav') ); ?>
 							</ul>
 						</div>
 						<div class="row">
-							<strong>Programme: </strong>
+							<strong>Programmes: </strong>
 							<ul>
 							<?php $posttags = get_the_terms( get_the_ID(), 'programme');
 								if ($posttags) {
@@ -68,7 +68,7 @@ get_template_parts( array( 'nav') ); ?>
 							</ul>
 						</div>
 						<div class="row">
-							<strong>Technology: </strong>
+							<strong>Technologies: </strong>
 							<ul>
 							<?php $posttags = get_the_terms( get_the_ID(), 'technology');
 								if ($posttags) {
@@ -79,7 +79,7 @@ get_template_parts( array( 'nav') ); ?>
 							</ul>
 						</div>
 						<div class="row">
-							<strong>Partner: </strong>
+							<strong>Partners: </strong>
 							<ul>
 							<?php $posttags = get_the_terms( get_the_ID(), 'partner');
 								if ($posttags) {
@@ -92,13 +92,13 @@ get_template_parts( array( 'nav') ); ?>
 					</div>
 				</div>
 				<div class="row">
-					<div class="casestudy_description font1 text-center">
-						<p><?php echo $casestudy_description; ?></p>
+					<div class="casestudy_image font1 text-center">
+						<img src="<?php echo $casestudy_image; ?>" class="img-responsive img-circle">
 					</div>
 				</div>
 				<div class="row">
-					<div class="casestudy_image font1 text-center">
-						<img src="<?php echo $casestudy_image; ?>" class="img-responsive img-circle">
+					<div class="casestudy_description font1 text-center">
+						<p><?php echo $casestudy_description; ?></p>
 					</div>
 				</div>
 				<div class="border row">
@@ -131,8 +131,8 @@ get_template_parts( array( 'nav') ); ?>
 			<?php endwhile; else : ?>
 				<p>Oops! The post could not be found.</p>
 			<?php endif; ?>
-			<!-- / The Loop -->
 		</div>
+		<!-- / The Loop -->
 	</div>
 </div>
 
