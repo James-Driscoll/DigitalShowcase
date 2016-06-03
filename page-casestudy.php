@@ -32,7 +32,7 @@ get_template_parts( array( 'nav') ); ?>
 
 		<?php
 		// Empty Form or Page Just Loaded
-		if ( isset($_GET["industry"]) ||
+		if ( isset($_GET["vertical"]) ||
 		     isset($_GET["technology"]) ||
 			 isset($_GET["programme"]) ||
 			 isset($_GET["partner"])
@@ -47,8 +47,8 @@ get_template_parts( array( 'nav') ); ?>
 
 		// Build tags arrays.
 		if ( $parameters_set == true ) {
-			if ( isset($_GET["industry"]) ) {
-				$industries = $_GET["industry"];
+			if ( isset($_GET["vertical"]) ) {
+				$industries = $_GET["vertical"];
 			}
 			if ( isset($_GET["technology"]) ) {
 				$technologies = $_GET["technology"];
@@ -65,25 +65,25 @@ get_template_parts( array( 'nav') ); ?>
 
 		<!-- Search Form -->
 		<div class="row">
-			<form id="tags-select" class="tags-select" action="<?php the_permalink(); ?>" method="get">
+			<form id="tags-select" class="font1 tags-select" action="<?php the_permalink(); ?>" method="get">
 				<div class="row">
 					<div class="col-md-3">
-						<select class="myselect2-select tags-industry form-control" multiple="multiple" name="industry[]">
-							<?php jd_get_search_tags('industry'); ?>
+						<select class="font1 myselect2-select tags-vertical form-control" multiple="multiple" name="vertical[]">
+							<?php jd_get_search_tags('vertical'); ?>
 						</select>
 					</div>
 					<div class="col-md-3">
-						<select class="tags-technology form-control myselect2-select" multiple="multiple" name="technology[]">
+						<select class="myselect2-select tags-technology form-control" multiple="multiple" name="technology[]">
 							<?php jd_get_search_tags('technology'); ?>
 						</select>
 					</div>
 					<div class="col-md-3">
-						<select class="tags-programme form-control myselect2-select" multiple="multiple" name="programme[]">
+						<select class="myselect2-select tags-programme form-control" multiple="multiple" name="programme[]">
 							<?php jd_get_search_tags('programme'); ?>
 						</select>
 					</div>
 					<div class="col-md-3">
-						<select class="tags-partner form-control myselect2-select" multiple="multiple" name="partner[]">
+						<select class="myselect2-select tags-partner form-control" multiple="multiple" name="partner[]">
 							<?php jd_get_search_tags('partner'); ?>
 						</select>
 					</div>
@@ -98,11 +98,11 @@ get_template_parts( array( 'nav') ); ?>
 
 		<?php
 		if ( $parameters_set == true ) {
-			if ( isset($_GET["industry"]) ) {
-	 			$industries = $_GET["industry"];
+			if ( isset($_GET["vertical"]) ) {
+	 			$industries = $_GET["vertical"];
 			} else {
 				$terms = get_terms( array(
-					'taxonomy' => 'industry',
+					'taxonomy' => 'vertical',
 					'hide_empty' => false,
 				) );
 				$count = 0;
@@ -156,7 +156,7 @@ get_template_parts( array( 'nav') ); ?>
 	 			'tax_query' => array(
 	 				'relation' => 'AND',
 		 				array(
-		 					'taxonomy' => 'industry',
+		 					'taxonomy' => 'vertical',
 		 					'field'    => 'slug',
 		 					'terms'    => $industries,
 		 					'operator' => 'IN',

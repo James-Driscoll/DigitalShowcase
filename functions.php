@@ -127,34 +127,34 @@ function register_casestudy() {
 /* -------------------------------------------------------
     Register Custom Taxonomies
 ------------------------------------------------------- */
-// Industry
-add_action( 'init', 'create_industry_nonhierarchical_taxonomy', 0 );
-function create_industry_nonhierarchical_taxonomy() {
+// Vertical
+add_action( 'init', 'create_vertical_nonhierarchical_taxonomy', 0 );
+function create_vertical_nonhierarchical_taxonomy() {
     $labels = array(
-        'name' => _x( 'Industry', 'taxonomy general name' ),
-        'singular_name' => _x( 'Industries', 'taxonomy singular name' ),
-        'search_items' =>  __( 'Search Industries' ),
-        'popular_items' => __( 'Popular Industries' ),
-        'all_items' => __( 'All Industries' ),
+        'name' => _x( 'Vertical', 'taxonomy general name' ),
+        'singular_name' => _x( 'Verticals', 'taxonomy singular name' ),
+        'search_items' =>  __( 'Search Verticals' ),
+        'popular_items' => __( 'Popular Verticals' ),
+        'all_items' => __( 'All Verticals' ),
         'parent_item' => null,
         'parent_item_colon' => null,
-        'edit_item' => __( 'Edit Industry' ),
-        'update_item' => __( 'Update Industry' ),
-        'add_new_item' => __( 'Add New Industry' ),
-        'new_item_name' => __( 'New Industry Name' ),
-        'separate_items_with_commas' => __( 'Separate Industries with commas' ),
-        'add_or_remove_items' => __( 'Add or remove Industries' ),
+        'edit_item' => __( 'Edit Vertical' ),
+        'update_item' => __( 'Update Vertical' ),
+        'add_new_item' => __( 'Add New Vertical' ),
+        'new_item_name' => __( 'New Vertical Name' ),
+        'separate_items_with_commas' => __( 'Separate Verticals with commas' ),
+        'add_or_remove_items' => __( 'Add or remove Verticals' ),
         'choose_from_most_used' => __( 'Choose from the most used topics' ),
-        'menu_name' => __( 'Industries' ),
+        'menu_name' => __( 'Verticals' ),
     );
-    register_taxonomy('industry','casestudy',array(
+    register_taxonomy('vertical','casestudy',array(
         'hierarchical' => false,
         'labels' => $labels,
         'show_ui' => true,
         'show_admin_column' => true,
         'update_count_callback' => '_update_post_term_count',
         'query_var' => true,
-        'rewrite' => array( 'slug' => 'industry' ),
+        'rewrite' => array( 'slug' => 'vertical' ),
     ));
 }
 
@@ -256,12 +256,12 @@ function jd_show_noposts_message( $casestudy_noposts_text ) {
 }
 
 // JD : Build Case Study Reference.
-function jd_build_reference( $casestudy_industries, $casestudy_programmes, $casestudy_details_molly_activity_id, $casestudy_details_effort, $casestudy_details_duration, $casestudy_details_teams ) {
+function jd_build_reference( $casestudy_verticals, $casestudy_programmes, $casestudy_details_molly_activity_id, $casestudy_details_effort, $casestudy_details_duration, $casestudy_details_teams ) {
     $reference = '';
-    // Industries
-    if ( $casestudy_industries ) {
-        foreach($casestudy_industries as $industry) {
-            $reference = $reference . $industry->name;
+    // Verticals
+    if ( $casestudy_verticals ) {
+        foreach($casestudy_verticals as $vertical) {
+            $reference = $reference . $vertical->name;
         }
         $reference = $reference . '_';
     }

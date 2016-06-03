@@ -1,8 +1,8 @@
 // Enable Select2
-$("myselect2-select").select2();
+$(".myselect2-select").select2();
 
 // Populate placeholders
-$(".tags-industry").select2({
+$(".tags-vertical").select2({
     tags: "true",
     placeholder: "Add a Vertical tag",
     allowClear: true

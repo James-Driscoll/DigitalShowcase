@@ -20,7 +20,7 @@ $casestudy_details_molly_activity_id = get_field('details_molly_activity_id');
 $casestudy_details_effort = get_field('details_effort');
 $casestudy_details_duration = get_field('details_duration');
 $casestudy_details_teams = get_field('details_teams');
-$casestudy_industries = get_the_terms( get_the_ID(), 'industry');
+$casestudy_industries = get_the_terms( get_the_ID(), 'vertical');
 $casestudy_programmes = get_the_terms( get_the_ID(), 'programme');
 $casestudy_technologies = get_the_terms( get_the_ID(), 'technology');
 $casestudy_partners = get_the_terms( get_the_ID(), 'partner');
@@ -48,7 +48,7 @@ get_template_parts( array( 'nav') ); ?>
 						<div class="row">
 							<strong>Verticals: </strong>
 							<ul>
-							<?php $posttags = get_the_terms( get_the_ID(), 'industry');
+							<?php $posttags = get_the_terms( get_the_ID(), 'vertical');
 								if ($posttags) {
 									foreach($posttags as $tag) {
 										echo '<li>' . $tag->name . '</li>';
