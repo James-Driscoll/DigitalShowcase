@@ -90,7 +90,9 @@ get_template_parts( array( 'nav') ); ?>
 				</div>
 				<?php $casestudies_button_text = get_field('casestudies_button_text', false, false); ?>
 				<div class="row">
-					<input class="mybutton" type="submit" value="<?php echo $casestudies_button_text; ?>">
+					<div class="col-md-12">
+						<input class="mybutton" type="submit" value="<?php echo $casestudies_button_text; ?>">
+					</div>
 				</div>
 			</form>
 		</div>
@@ -140,47 +142,67 @@ get_template_parts( array( 'nav') ); ?>
 			if ( isset($_GET["partner"]) ) {
 				$partners = $_GET["partner"];
 			} else {
-				$terms = get_terms( array(
-					'taxonomy' => 'partner',
-					'hide_empty' => false,
-				) );
-				$count = 0;
-				foreach ( $terms as $term ) {
-					$partners[$count] = $term->name;
-					$count = $count + 1;
-				}
+				$partners = false;
 			}
 
-	 		$args = array(
-	 			'post_type' => 'casestudy',
-	 			'tax_query' => array(
-	 				'relation' => 'AND',
-		 				array(
-		 					'taxonomy' => 'vertical',
-		 					'field'    => 'slug',
-		 					'terms'    => $industries,
-		 					'operator' => 'IN',
-		 				),
-						array(
-		 					'taxonomy' => 'technology',
-		 					'field'    => 'slug',
-		 					'terms'    => $technologies,
-		 					'operator' => 'IN',
-		 				),
-						array(
-							'taxonomy' => 'programme',
-							'field'    => 'slug',
-							'terms'    => $programmes,
-							'operator' => 'IN',
-						),
-						array(
-							'taxonomy' => 'partner',
-							'field'    => 'slug',
-							'terms'    => $partners,
-							'operator' => 'IN',
-						),
-	 			),
-	 		);
+			if ( ! $partners == false ) {
+
+				$args = array(
+		 			'post_type' => 'casestudy',
+		 			'tax_query' => array(
+		 				'relation' => 'AND',
+			 				array(
+			 					'taxonomy' => 'vertical',
+			 					'field'    => 'slug',
+			 					'terms'    => $industries,
+			 					'operator' => 'IN',
+			 				),
+							array(
+			 					'taxonomy' => 'technology',
+			 					'field'    => 'slug',
+			 					'terms'    => $technologies,
+			 					'operator' => 'IN',
+			 				),
+							array(
+								'taxonomy' => 'programme',
+								'field'    => 'slug',
+								'terms'    => $programmes,
+								'operator' => 'IN',
+							),
+							array(
+								'taxonomy' => 'partner',
+								'field'    => 'slug',
+								'terms'    => $partners,
+								'operator' => 'IN',
+							),
+		 			),
+		 		);
+			} else {
+				$args = array(
+		 			'post_type' => 'casestudy',
+		 			'tax_query' => array(
+		 				'relation' => 'AND',
+			 				array(
+			 					'taxonomy' => 'vertical',
+			 					'field'    => 'slug',
+			 					'terms'    => $industries,
+			 					'operator' => 'IN',
+			 				),
+							array(
+			 					'taxonomy' => 'technology',
+			 					'field'    => 'slug',
+			 					'terms'    => $technologies,
+			 					'operator' => 'IN',
+			 				),
+							array(
+								'taxonomy' => 'programme',
+								'field'    => 'slug',
+								'terms'    => $programmes,
+								'operator' => 'IN',
+							),
+		 			),
+		 		);
+			}
 			} else {
 				$args = array(
 				   'post_type' => 'casestudy',
@@ -204,7 +226,7 @@ get_template_parts( array( 'nav') ); ?>
 				$casestudy_summary = get_field('casestudy_summary');
 				$casestudy_tags = get_field('casestudy_tags');
 				$casestudy_image = get_field('casestudy_image') ?>
-				<div class="tile font1 col-sm-6 col-md-3">
+				<div class="tile font1 col-sm-3">
 					<a href="<?php the_permalink() ?>" class="thumbnail">
 						<img src="<?php echo $casestudy_image; ?>" class="img-responsive img-circle"/>
 						<div class="caption">

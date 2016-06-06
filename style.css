@@ -121,6 +121,12 @@ body {
     margin-top: 120px;
     margin-bottom: 60px;
 }
+@media only screen and (max-width: 990px) {
+    .content {
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+}
 .row {
     margin-right: 0px;
     margin-left: 0px;
@@ -215,7 +221,29 @@ div h1 {
     border-bottom: 1px solid #89bdd3;
 }
 @media only screen and (max-width: 990px) {
-
+    .header {
+        position: relative;
+        height: 180px;
+        text-align: center;
+    }
+    .header .site-title h1,
+    .header .site-title h2 {
+        text-align: center;
+    }
+    .header .site-title h1 {
+        font-size: 20px;
+    }
+    .navWrapper {
+        margin-top: 30px;
+    }
+    .navWrapper .nav ul {
+        float: none;
+        height: 20px;
+        line-height: 20px;
+    }
+    .navWrapper .nav ul li {
+        padding: 0px;
+    }
 }
 
 /* -- Front-Page Items ------------------------------------------------------ */
@@ -322,6 +350,13 @@ a.mybutton:active {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+@media only screen and (max-width: 990px) {
+    .mybutton {
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+    }
+}
 
 .page-heading h2,
 .page-heading p {
@@ -364,7 +399,11 @@ a.mybutton:active {
 .returned {
     margin-top: 50px;
 }
-
+@media only screen and (max-width: 990px) {
+    .select2 {
+        margin-bottom: 10px;
+    }
+}
 /* -- Tile Items ------------------------- */
 .tile a {
     height: 430px;
@@ -458,7 +497,7 @@ a.mybutton:active {
 }
 .footer .social li a i {
     color: #9ad3de;
-    font-size: 30px;
+    font-size: 24px;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
@@ -473,7 +512,11 @@ a.mybutton:active {
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
 }
-
+@media only screen and (max-width: 990px) {
+    .footer .social li a {
+        margin: 5px;
+    }
+}
 
 
 
