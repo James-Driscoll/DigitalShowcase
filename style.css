@@ -405,33 +405,106 @@ a.mybutton:active {
     }
 }
 /* -- Tile Items ------------------------- */
+ div.tile {
+    position: relative;
+    overflow: hidden;
+    background: #9ad3de;
+    text-align: center;
+    cursor: pointer;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 30px;
+}
 .tile a {
-    height: 430px;
-    margin: 10px;
-    padding: 10px;
-    color: #3b3a36;
-    display: block;
-    border: 1px solid #fff;
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
-}
-.tile a:hover {
-    border: 1px solid #9ad3de;
     text-decoration: none;
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
-    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);
-    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
-.tile a h2 {
+.tile img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.8;
+    max-width: none;
+    width: -webkit-calc(100% + 20px);
+    width: calc(100% + 20px);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-10px,0,0);
+    transform: translate3d(-10px,0,0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.tile:hover img {
+	opacity: 0.2;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+.tile h2 {
     font-size: 20px;
+    font-weight: 300;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
 }
+.tile h2::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: #fff;
+	content: '';
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(-100%,0,0);
+	transform: translate3d(-100%,0,0);
+}
+.tile:hover h2::after {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+.tile h2,
+.tile p {
+   margin: 0;
+}
+.tile p {
+    letter-spacing: 1px;
+    font-size: 14px;
+	padding: 10px;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(100%,0,0);
+	transform: translate3d(100%,0,0);
+}
+.tile:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+.tile .caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.tile .caption::before,
+.tile .caption::after {
+   pointer-events: none;
+}
+
+
+
+
+
+
 
 /* --Case Study Single Items------------------------------------------------- */
 .casestudy_single .casestudy_tags ul {
@@ -458,7 +531,7 @@ a.mybutton:active {
     color: #9ad3de;
 }
 .casestudy_single .casestudy_image img {
-    max-height: 300px;
+    max-height: 180px;
     margin-bottom: 30px;
     margin-right: auto;
     margin-left: auto;
@@ -517,6 +590,17 @@ a.mybutton:active {
         margin: 5px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

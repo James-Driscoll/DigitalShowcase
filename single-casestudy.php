@@ -44,61 +44,64 @@ get_template_parts( array( 'nav') ); ?>
 					</div>
 				</div>
 				<div class="row">
-					<div class="casestudy_tags font1">
-						<div class="row">
-							<strong>Verticals: </strong>
-							<ul>
-							<?php $posttags = get_the_terms( get_the_ID(), 'vertical');
-								if ($posttags) {
-									foreach($posttags as $tag) {
-										echo '<li>' . $tag->name . '</li>';
-									}
-								} ?>
-							</ul>
-						</div>
-						<div class="row">
-							<strong>Programmes: </strong>
-							<ul>
-							<?php $posttags = get_the_terms( get_the_ID(), 'programme');
-								if ($posttags) {
-									foreach($posttags as $tag) {
-										echo '<li>' . $tag->name . '</li>';
-									}
-								} ?>
-							</ul>
-						</div>
-						<div class="row">
-							<strong>Technologies: </strong>
-							<ul>
-							<?php $posttags = get_the_terms( get_the_ID(), 'technology');
-								if ($posttags) {
-									foreach($posttags as $tag) {
-										echo '<li>' . $tag->name . '</li>';
-									}
-								} ?>
-							</ul>
-						</div>
-						<div class="row">
-							<strong>Partners: </strong>
-							<ul>
-							<?php $posttags = get_the_terms( get_the_ID(), 'partner');
-								if ($posttags) {
-									foreach($posttags as $tag) {
-										echo '<li>' . $tag->name . '</li>';
-									}
-								} ?>
-							</ul>
+					<div class="col-md-4">
+						<div class="casestudy_tags font1">
+							<div class="row">
+								<strong>Verticals: </strong>
+								<ul>
+								<?php $posttags = get_the_terms( get_the_ID(), 'vertical');
+									if ($posttags) {
+										foreach($posttags as $tag) {
+											echo '<li>' . $tag->name . '</li>';
+										}
+									} ?>
+								</ul>
+							</div>
+							<div class="row">
+								<strong>Programmes: </strong>
+								<ul>
+								<?php $posttags = get_the_terms( get_the_ID(), 'programme');
+									if ($posttags) {
+										foreach($posttags as $tag) {
+											echo '<li>' . $tag->name . '</li>';
+										}
+									} ?>
+								</ul>
+							</div>
+							<div class="row">
+								<strong>Technologies: </strong>
+								<ul>
+								<?php $posttags = get_the_terms( get_the_ID(), 'technology');
+									if ($posttags) {
+										foreach($posttags as $tag) {
+											echo '<li>' . $tag->name . '</li>';
+										}
+									} ?>
+								</ul>
+							</div>
+							<div class="row">
+								<strong>Partners: </strong>
+								<ul>
+								<?php $posttags = get_the_terms( get_the_ID(), 'partner');
+									if ($posttags) {
+										foreach($posttags as $tag) {
+											echo '<li>' . $tag->name . '</li>';
+										}
+									} ?>
+								</ul>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="casestudy_image font1 text-center">
-						<img src="<?php echo $casestudy_image; ?>" class="img-responsive img-circle">
+					<div class="col-md-4">
+						<div class="casestudy_image font1 text-center">
+							<img src="<?php echo $casestudy_image; ?>" class="img-responsive img-circle">
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="casestudy_description font1 text-center">
-						<p><?php echo $casestudy_description; ?></p>
+					<div class="col-md-4">
+						<div class="casestudy_description font1 text-left">
+							<h3>Company Info</h3>
+							<p><?php echo $casestudy_description; ?></p>
+						</div>
 					</div>
 				</div>
 				<div class="border row">

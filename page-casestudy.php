@@ -68,7 +68,7 @@ get_template_parts( array( 'nav') ); ?>
 			<form id="tags-select" class="font1 tags-select" action="<?php the_permalink(); ?>" method="get">
 				<div class="row">
 					<div class="col-md-3">
-						<select class="font1 myselect2-select tags-vertical form-control" multiple="multiple" name="vertical[]">
+						<select class="myselect2-select tags-vertical form-control" multiple="multiple" name="vertical[]">
 							<?php jd_get_search_tags('vertical'); ?>
 						</select>
 					</div>
@@ -226,16 +226,17 @@ get_template_parts( array( 'nav') ); ?>
 				$casestudy_summary = get_field('casestudy_summary');
 				$casestudy_tags = get_field('casestudy_tags');
 				$casestudy_image = get_field('casestudy_image') ?>
-				<div class="tile font1 col-sm-3">
-					<a href="<?php the_permalink() ?>" class="thumbnail">
-						<img src="<?php echo $casestudy_image; ?>" class="img-responsive img-circle"/>
-						<div class="caption">
-							<h2><?php echo $casestudy_title; ?></h2>
-							<p><?php echo $casestudy_summary; ?></p>
-							<p><?php echo $casestudy_tags; ?></p>
-						</div>
+				<div class="col-md-4">
+				<div class="tile font1">
+					<a href="<?php the_permalink() ?>">
+					<img src="https://placeimg.com/480/360/arch"/>
+					<div class="caption">
+						<h2><?php echo $casestudy_title; ?></h2>
+						<p><?php echo $casestudy_summary; ?></p>
+					</div>
 					</a>
 				</div>
+			</div>
 			<?php endwhile;
 			wp_reset_postdata();
 			else :
