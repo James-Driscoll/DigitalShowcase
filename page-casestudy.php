@@ -229,7 +229,7 @@ get_template_parts( array( 'nav') ); ?>
 				<div class="col-md-4">
 				<div class="tile font1">
 					<a href="<?php the_permalink() ?>">
-					<img src="https://placeimg.com/480/360/arch"/>
+					<img src="<?php echo $casestudy_image; ?>"/>
 					<div class="caption">
 						<h2><?php echo $casestudy_title; ?></h2>
 						<p><?php echo $casestudy_summary; ?></p>

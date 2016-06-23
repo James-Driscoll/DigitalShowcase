@@ -121,6 +121,9 @@ body {
     margin-top: 120px;
     margin-bottom: 60px;
 }
+.top-margin {
+    margin-top: 30px;
+}
 @media only screen and (max-width: 990px) {
     .content {
         margin-top: 0px;
@@ -135,7 +138,7 @@ body {
     font-family: 'Titillium Web', sans-serif;
 }
 div h1 {
-    color: #9ad3de;
+    color: #f05f40;
     margin-top: 50px;
     margin-bottom: 50px;
     font-size: 32px;
@@ -153,7 +156,7 @@ div h1 {
 
 /* -- Title Items ----------------------- */
 .site-title {
-    color: #f9f9f9;
+    color: #fff;
     margin-top: 22px;
 }
 .site-title h1 {
@@ -161,7 +164,7 @@ div h1 {
     font-weight: 800;
     text-transform: uppercase;
     font-family: 'Raleway', 'Titillium Web', sans-serif;
-    color: #fff;
+    color: #f05f40;
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: left;
@@ -190,22 +193,11 @@ div h1 {
     text-decoration: none;
     font-weight: normal;
     font-size: 14px;
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
-    color: #f9f9f9;
+    color: #fff;
     padding: 10px;
 }
  .navWrapper .nav a:hover {
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
-    color: #89bdd3;
-    border-bottom: 1px solid #89bdd3;
+    border-bottom: 1px solid;
 }
  .navWrapper .nav ul .current-page-ancestor:hover a,
  .navWrapper .nav ul .current-page-ancestor a,
@@ -213,12 +205,11 @@ div h1 {
  .navWrapper .nav ul .current-menu-item:hover a,
  .navWrapper .nav ul .current-page-item a,
  .navWrapper .nav ul .current-menu-item a, {
-    color: #89bdd3;
+    font-weight: bold;
 }
  .navWrapper .nav ul .current-menu-item a {
     font-weight: bold;
-    color: #9ad3de;
-    border-bottom: 1px solid #89bdd3;
+    border-bottom: 1px solid;
 }
 @media only screen and (max-width: 990px) {
     .header {
@@ -250,13 +241,13 @@ div h1 {
 /* -- Carousel Items -------------------- */
 .carousel .carousel-control .glyphicon-chevron-left,
 .carousel .carousel-control .glyphicon-chevron-right {
-    color: #9ad3de;
+    color: #f05f40;
 }
 .carousel .carousel-indicators li {
-    border-color: #9ad3de;
+    border-color: #f05f40;
 }
 .carousel li.active {
-    background-color: #9ad3de;
+    background-color: #f05f40;
 }
 
 /* -- Overlay Items --------------------- */
@@ -266,7 +257,7 @@ div h1 {
     margin-top: 120px;
 }
 .overlay h3 {
-    color: #9ad3de;
+    color: #f05f40;
     font-size: 26px;
     text-transform: capitalize;
     margin-top: 0px;
@@ -278,16 +269,16 @@ div h1 {
 .overlay a {
     font-size: 18px;
     text-decoration: none;
-    color: #9ad3de;
+    color: #f05f40;
     float: right;
 }
 .overlay a:hover,
 .overlay a:hover i {
-    color: #89bdd3;
+    color: #f05f40;
 }
 .overlay a i {
     padding-left: 10px;
-    color: #9ad3de;
+    color: #f05f40;
 }
 
 /* -- Scroll-Down Items ----------------- */
@@ -305,7 +296,7 @@ div h1 {
     transition: all .1s ease-in;
 }
 .scroll-down a:hover i  {
-    color: #9ad3de;
+    color: #f05f40;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
@@ -320,8 +311,8 @@ div h1 {
     padding: 10px;
     margin: 10px;
     background: none;
-    color: #9ad3de;
-    border: 2px solid #9ad3de;
+    color: #f05f40;
+    border: 2px solid #f05f40;
     font-size: 16px;
     border-radius: 5px;
     -moz-transition: all .1s ease-in;
@@ -332,9 +323,9 @@ div h1 {
 }
 a.mybutton:hover,
 .mybutton:hover {
-    border: 2px solid #9ad3de;
-    background: #9ad3de;
-    color: #f9f9f9;
+    border: 2px solid #f05f40;
+    background: #f05f40;
+    color: #fff;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
@@ -344,7 +335,7 @@ a.mybutton:hover,
 }
 a.mybutton:focus,
 a.mybutton:active {
-    background-color: #89bdd3;
+    background-color: #f05f40;
 }
 .buttons {
     margin-top: 50px;
@@ -375,7 +366,7 @@ a.mybutton:active {
 .page-home .item  i {
     font-size: 70px;
     display:block;
-    color: #9ad3de;
+    color: #f05f40;
 }
 
 /* --Case Study Page Items--------------------------------------------------- */
@@ -386,11 +377,11 @@ a.mybutton:active {
 .tags-select select {
     kwi
 }
-.tags-select .btn {
-    margin-top: 20px;
+.tags-select .mybutton {
+    width: 100%;
 }
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
-    background-color: #9ad3de;
+    background-color: #f05f40;
     color: #fff;
 }
 .select2-container--open {
@@ -408,7 +399,8 @@ a.mybutton:active {
  div.tile {
     position: relative;
     overflow: hidden;
-    background: #9ad3de;
+    height: 300px;
+    background: #f05f40;
     text-align: center;
     cursor: pointer;
     padding-left: 0px;
@@ -441,7 +433,7 @@ a.mybutton:active {
 }
 .tile h2 {
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 600;
     position: relative;
     overflow: hidden;
     padding: 10px;
@@ -470,6 +462,7 @@ a.mybutton:active {
 .tile p {
     letter-spacing: 1px;
     font-size: 14px;
+    font-weight: normal;
 	padding: 10px;
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -517,18 +510,18 @@ a.mybutton:active {
     display: inline-block;
     width: 100px;
     padding: 0px;
-    color: #9ad3de;
+    color: #f05f40;
 }
 .casestudy_single .casestudy_tags ul li {
     display: inline-block;
     padding: 3px 8px;
     margin: 2px 2px;
-    background-color: #9ad3de;
+    background-color: #f05f40;
     color: #fff;
     border-radius: 4px;
 }
 .casestudy_single h3 {
-    color: #9ad3de;
+    color: #f05f40;
 }
 .casestudy_single .casestudy_image img {
     max-height: 180px;
@@ -537,7 +530,7 @@ a.mybutton:active {
     margin-left: auto;
 }
 .casestudy_single .border {
-    border: 2px solid #9ad3de;
+    border: 2px solid #f05f40;
     border-radius: 10px;
 }
 .nav-back {
@@ -569,7 +562,7 @@ a.mybutton:active {
     margin: 30px;
 }
 .footer .social li a i {
-    color: #9ad3de;
+    color: #f05f40;
     font-size: 24px;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
@@ -578,7 +571,7 @@ a.mybutton:active {
     transition: all .1s ease-in;
 }
 .footer .social li a:hover i {
-    color: #89bdd3;
+    color: #f05f40;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
