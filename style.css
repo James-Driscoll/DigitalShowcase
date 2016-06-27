@@ -561,22 +561,17 @@ a.mybutton:active {
 .footer .social li a {
     margin: 30px;
 }
-.footer .social li a i {
-    color: #f05f40;
-    font-size: 24px;
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
+.footer .social li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 14px;
 }
-.footer .social li a:hover i {
-    color: #f05f40;
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
+.footer .social li a i {
+    font-size: 30px;
+}
+.footer .social li a:hover {
+    opacity: 0.7;
 }
 @media only screen and (max-width: 990px) {
     .footer .social li a {
