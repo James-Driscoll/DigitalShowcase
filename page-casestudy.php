@@ -175,6 +175,7 @@ get_template_parts( array( 'nav') ); ?>
 								'terms'    => $partners,
 								'operator' => 'IN',
 							),
+							'posts_per_page'=>-1,
 		 			),
 		 		);
 			} else {

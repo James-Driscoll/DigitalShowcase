@@ -249,6 +249,17 @@ div h1 {
 .carousel li.active {
     background-color: #f05f40;
 }
+.carousel .carousel-caption {
+    bottom: none;
+    top: 12%;
+}
+
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 
 /* -- Overlay Items --------------------- */
 .overlay {

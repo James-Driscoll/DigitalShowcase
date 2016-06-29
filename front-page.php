@@ -45,7 +45,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img src="<?php echo $carousel_slide1_image; ?>" alt=""/>
+            <img src="<?php echo $carousel_slide1_image; ?>">
             <div class="carousel-caption">
                 <!-- Optional Overlay -->
                 <div class="row">
@@ -56,10 +56,25 @@
                     </div>
                 </div>
                 <!-- / Optional Overlay -->
+
+                <!-- Buttons -->
+                <?php $button_1_text = get_field('button_1_text');
+                $button_1_link = get_field('button_1_link');
+                $button_2_text = get_field('button_2_text');
+                $button_2_link = get_field('button_2_link'); ?>
+                <div class="row">
+                    <div class="">
+                        <div class="text-center buttons font1">
+                            <a href="<?php echo $button_1_link ?>" class="mybutton"><?php echo $button_1_text ?></a>
+                            <a href="<?php echo $button_2_link ?>" class="mybutton"><?php echo $button_2_text ?></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- / Buttons -->
             </div>
         </div>
         <div class="item">
-            <img src="<?php echo $carousel_slide2_image; ?>" alt=""/>
+            <img src="<?php echo $carousel_slide2_image; ?>">
             <div class="carousel-caption">
                 <!-- Optional Article Overlay -->
                 <div class="row">
@@ -70,6 +85,21 @@
                     </div>
                 </div>
                 <!-- / Optional Article Overlay -->
+
+                <!-- Buttons -->
+                <?php $button_1_text = get_field('button_1_text');
+                $button_1_link = get_field('button_1_link');
+                $button_2_text = get_field('button_2_text');
+                $button_2_link = get_field('button_2_link'); ?>
+                <div class="row">
+                    <div class="">
+                        <div class="text-center buttons font1">
+                            <a href="<?php echo $button_1_link ?>" class="mybutton"><?php echo $button_1_text ?></a>
+                            <a href="<?php echo $button_2_link ?>" class="mybutton"><?php echo $button_2_text ?></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- / Buttons -->
             </div>
         </div>
         <?php if ( $carousel_slides > 2 ) {
@@ -89,6 +119,21 @@
                         </div>
                     </div>
                     <!-- / Optional Article Overlay -->
+
+                    <!-- Buttons -->
+                    <?php $button_1_text = get_field('button_1_text');
+                    $button_1_link = get_field('button_1_link');
+                    $button_2_text = get_field('button_2_text');
+                    $button_2_link = get_field('button_2_link'); ?>
+                    <div class="row">
+                        <div class="">
+                            <div class="text-center buttons font1">
+                                <a href="<?php echo $button_1_link ?>" class="mybutton"><?php echo $button_1_text ?></a>
+                                <a href="<?php echo $button_2_link ?>" class="mybutton"><?php echo $button_2_text ?></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / Buttons -->
                 </div>
             </div>
             <?php if ( $carousel_slides > 3 ) {
@@ -108,6 +153,21 @@
                             </div>
                         </div>
                         <!-- / Optional Article Overlay -->
+
+                        <!-- Buttons -->
+                        <?php $button_1_text = get_field('button_1_text');
+                        $button_1_link = get_field('button_1_link');
+                        $button_2_text = get_field('button_2_text');
+                        $button_2_link = get_field('button_2_link'); ?>
+                        <div class="row">
+                            <div class="">
+                                <div class="text-center buttons font1">
+                                    <a href="<?php echo $button_1_link ?>" class="mybutton"><?php echo $button_1_text ?></a>
+                                    <a href="<?php echo $button_2_link ?>" class="mybutton"><?php echo $button_2_text ?></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / Buttons -->
                     </div>
                 </div>
                 <?php if ( $carousel_slides > 4 ) {
@@ -127,6 +187,21 @@
                                 </div>
                             </div>
                             <!-- / Optional Article Overlay -->
+
+                            <!-- Buttons -->
+                            <?php $button_1_text = get_field('button_1_text');
+                            $button_1_link = get_field('button_1_link');
+                            $button_2_text = get_field('button_2_text');
+                            $button_2_link = get_field('button_2_link'); ?>
+                            <div class="row">
+                                <div class="">
+                                    <div class="text-center buttons font1">
+                                        <a href="<?php echo $button_1_link ?>" class="mybutton"><?php echo $button_1_text ?></a>
+                                        <a href="<?php echo $button_2_link ?>" class="mybutton"><?php echo $button_2_text ?></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- / Buttons -->
                         </div>
                     </div>
                 <?php } ?>
@@ -145,21 +220,6 @@
 </div>
 </div>
 <!-- / Carousel -->
-
-<!-- Buttons -->
-<?php $button_1_text = get_field('button_1_text');
-$button_1_link = get_field('button_1_link');
-$button_2_text = get_field('button_2_text');
-$button_2_link = get_field('button_2_link'); ?>
-<div class="row">
-    <div class="container">
-        <div class="text-center buttons font1">
-            <a href="<?php echo $button_1_link ?>" class="mybutton"><?php echo $button_1_text ?></a>
-            <a href="<?php echo $button_2_link ?>" class="mybutton"><?php echo $button_2_text ?></a>
-        </div>
-    </div>
-</div>
-<!-- / Buttons -->
 
 <!-- JQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
