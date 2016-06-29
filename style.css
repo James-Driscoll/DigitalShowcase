@@ -122,7 +122,7 @@ body {
     margin-bottom: 60px;
 }
 .top-margin {
-    margin-top: 30px;
+    margin-top: 15px;
 }
 @media only screen and (max-width: 990px) {
     .content {
@@ -506,6 +506,12 @@ a.mybutton:active {
     padding: 0px;
     margin-bottom: 30px;
 }
+.casestudy_single .casestudy_tags .tag_label {
+    padding-left: 0px;
+}
+.casestudy_single .casestudy_tags .tag {
+    margin-bottom: 10px;
+}
 .casestudy_single .casestudy_tags strong {
     display: inline-block;
     width: 100px;
@@ -513,8 +519,9 @@ a.mybutton:active {
     color: #f05f40;
 }
 .casestudy_single .casestudy_tags ul li {
+    font-size: 12px;
     display: inline-block;
-    padding: 3px 8px;
+    padding: 3px 5px;
     margin: 2px 2px;
     background-color: #f05f40;
     color: #fff;

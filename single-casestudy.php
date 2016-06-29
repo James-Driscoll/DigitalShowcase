@@ -10,7 +10,7 @@
 
 $casestudy_title = get_field('casestudy_title');
 $casestudy_description = get_field('casestudy_description');
-$casestudy_wide_image = get_field('casestudy_wide_image');
+$casestudy_image = get_field('casestudy_image');
 $casestudy_supporting_image = get_field('casestudy_supporting_image');
 $casestudy_challenge = get_field('casestudy_challenge');
 $casestudy_result = get_field('casestudy_result');
@@ -41,10 +41,6 @@ get_template_parts( array( 'nav') ); ?>
 				</div>
 
 				<div class="row">
-					<img src="<?php echo $casestudy_wide_image; ?>" class="img-responsive"/>
-				</div>
-
-				<div class="row top-margin">
 					<div class="col-md-8">
 						<div class="border row">
 							<div class="casestudy_challenge font1 col-md-6">
@@ -72,58 +68,68 @@ get_template_parts( array( 'nav') ); ?>
 					</div>
 
 					<div class="col-md-4">
+
+						<div class="row">
+							<img src="<?php echo $casestudy_image; ?>" class="img-responsive img-rounded"/>
+						</div>
+
 						<div class="casestudy_description font1 text-left">
-							<h3>Company Info</h3>
 							<p><?php echo $casestudy_description; ?></p>
 						</div>
+
 						<div class="casestudy_tags top-margin font1">
-							<div class="row">
-								<strong>Verticals: </strong>
-								<ul>
-								<?php $posttags = get_the_terms( get_the_ID(), 'vertical');
-									if ($posttags) {
-										foreach($posttags as $tag) {
-											echo '<li>' . $tag->name . '</li>';
-										}
-									} ?>
-								</ul>
+							<div class="row tag">
+								<div class="col-xs-3 tag_label"><strong>Verticals: </strong></div>
+								<div class="col-xs-9">
+									<ul>
+									<?php $posttags = get_the_terms( get_the_ID(), 'vertical');
+										if ($posttags) {
+											foreach($posttags as $tag) {
+												echo '<li>' . $tag->name . '</li>';
+											}
+										} ?>
+									</ul>
+								</div>
 							</div>
-							<div class="row">
-								<strong>Programmes: </strong>
-								<ul>
-								<?php $posttags = get_the_terms( get_the_ID(), 'programme');
-									if ($posttags) {
-										foreach($posttags as $tag) {
-											echo '<li>' . $tag->name . '</li>';
-										}
-									} ?>
-								</ul>
+							<div class="row tag">
+								<div class="col-xs-3 tag_label"><strong>Programmes: </strong></div>
+								<div class="col-xs-9">
+									<ul>
+									<?php $posttags = get_the_terms( get_the_ID(), 'programme');
+										if ($posttags) {
+											foreach($posttags as $tag) {
+												echo '<li>' . $tag->name . '</li>';
+											}
+										} ?>
+									</ul>
+								</div>
 							</div>
-							<div class="row">
-								<strong>Technologies: </strong>
-								<ul>
-								<?php $posttags = get_the_terms( get_the_ID(), 'technology');
-									if ($posttags) {
-										foreach($posttags as $tag) {
-											echo '<li>' . $tag->name . '</li>';
-										}
-									} ?>
-								</ul>
+							<div class="row tag">
+								<div class="col-xs-3 tag_label"><strong>Technologies: </strong></div>
+								<div class="col-xs-9">
+									<ul>
+									<?php $posttags = get_the_terms( get_the_ID(), 'technology');
+										if ($posttags) {
+											foreach($posttags as $tag) {
+												echo '<li>' . $tag->name . '</li>';
+											}
+										} ?>
+									</ul>
+								</div>
 							</div>
-							<div class="row">
-								<strong>Partners: </strong>
-								<ul>
-								<?php $posttags = get_the_terms( get_the_ID(), 'partner');
-									if ($posttags) {
-										foreach($posttags as $tag) {
-											echo '<li>' . $tag->name . '</li>';
-										}
-									} ?>
-								</ul>
+							<div class="row tag">
+								<div class="col-xs-3 tag_label"><strong>Partners: </strong></div>
+								<div class="col-xs-9">
+									<ul>
+									<?php $posttags = get_the_terms( get_the_ID(), 'partner');
+										if ($posttags) {
+											foreach($posttags as $tag) {
+												echo '<li>' . $tag->name . '</li>';
+											}
+										} ?>
+									</ul>
+								</div>
 							</div>
-						</div>
-						<div class="row top-margin">
-							<img src="<?php echo $casestudy_supporting_image; ?>" class="img-responsive"/>
 						</div>
 
 					</div>

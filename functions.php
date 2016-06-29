@@ -258,20 +258,6 @@ function jd_show_noposts_message( $casestudy_noposts_text ) {
 // JD : Build Case Study Reference.
 function jd_build_reference( $casestudy_verticals, $casestudy_programmes, $casestudy_details_molly_activity_id, $casestudy_details_effort, $casestudy_details_duration, $casestudy_details_teams ) {
     $reference = '';
-    // Verticals
-    if ( $casestudy_verticals ) {
-        foreach($casestudy_verticals as $vertical) {
-            $reference = $reference . $vertical->name;
-        }
-        $reference = $reference . '_';
-    }
-    // Programmes
-    if ( $casestudy_programmes ) {
-        foreach($casestudy_programmes as $programme ) {
-            $reference = $reference . $programme->name;
-        }
-        $reference = $reference . '_';
-    }
     // Activity ID
     if ( $casestudy_details_molly_activity_id ) {
         $reference = $reference . 'ID' . $casestudy_details_molly_activity_id . '_';
