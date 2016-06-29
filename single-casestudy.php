@@ -65,6 +65,21 @@ get_template_parts( array( 'nav') ); ?>
 							</div>
 						</div>
 
+						<!-- Buttons -->
+						<?php $button_1_text = get_field('button_1_text');
+						$button_1_link = get_field('button_1_link');
+						$button_2_text = get_field('button_2_text');
+						$button_2_link = get_field('button_2_link'); ?>
+						<div class="row">
+							<div class="">
+								<div class="text-center buttons font1">
+									<a href="http://digitalshowcase.marketing/case-studies" class="mybutton">Back to Case Studies</a>
+									<a href="http://digitalshowcase.marketing/contact" class="mybutton">Contact Us</a>
+								</div>
+							</div>
+						</div>
+						<!-- / Buttons -->
+
 					</div>
 
 					<div class="col-md-4">

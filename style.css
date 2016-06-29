@@ -540,6 +540,9 @@ a.mybutton:active {
     border: 2px solid #f05f40;
     border-radius: 10px;
 }
+.casestudy_single .border ul {
+    margin-bottom: 20px;
+}
 .nav-back {
     margin-top: 25px;
 }
